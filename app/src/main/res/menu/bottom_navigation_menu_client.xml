@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_services"
+        android:enabled="true"
+        android:icon="@drawable/menu_services"
+        android:title="@string/menu_services"/>
+    <item
+        android:id="@+id/bottom_map"
+        android:enabled="true"
+        android:icon="@drawable/menu_map"
+        android:title="@string/menu_map"/>
+    <item
+        android:id="@+id/bottom_me"
+        android:enabled="true"
+        android:icon="@drawable/menu_me"
+        android:title="@string/menu_me"/>
+</menu>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/user_reg_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/user_reg"
+        app:layout_constraintBottom_toTopOf="@+id/auth_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/auth_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/sfui_semibold"
+        android:text="@string/registration"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/linear_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/auth_iv"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:contentDescription="@string/logo"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/medicine_ui"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/edit_text_background"
+            android:nextFocusDown="@id/password"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColorHint="@color/gray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/sfui_light"
+                android:hint="@string/login"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/edit_text_background"
+            android:inputType="textPassword"
+            android:nextFocusDown="@id/password_repeat"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColorHint="@color/gray"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTintMode="src_atop">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/sfui_light"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                app:passwordToggleEnabled="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_repeat_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_text_background"
+            android:inputType="textPassword"
+            android:nextFocusDown="@id/register_button"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColorHint="@color/gray"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTintMode="src_atop">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_repeat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/sfui_light"
+                android:hint="@string/repeat_password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                app:passwordToggleEnabled="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_main_background"
+            android:fontFamily="@font/sfui_semibold"
+            android:text="@string/register"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:theme="@style/Button.DarkRed" />
+
+        <TextView
+            android:id="@+id/error_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/sfui_semibold"
+            android:textColor="@color/error"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

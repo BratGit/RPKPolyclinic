@@ -1,0 +1,52 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.rpkeffect.android.rpkpolyclinik"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:26.8.0')
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation files('libs/activation.jar')
+    implementation files('libs/additionnal.jar')
+    implementation files('libs/mail.jar')
+    implementation 'com.google.android.material:material:1.4.0-alpha02'
+    implementation platform('com.google.firebase:firebase-bom:27.1.0')
+    implementation 'com.google.firebase:firebase-database:19.7.0'
+    implementation 'com.google.firebase:firebase-auth:20.0.4'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.firebase:firebase-storage:19.2.2'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.23'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'com.github.jgabrielfreitas:BlurImageView:1.0.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+}

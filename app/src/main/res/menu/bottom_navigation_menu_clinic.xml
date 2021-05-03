@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/doctorsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_doctor"
+        android:title="@string/doctors"/>
+    <item
+        android:id="@+id/clientsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_clients"
+        android:title="@string/clients"/>
+    <item
+        android:id="@+id/clinicFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_hospital"
+        android:title="@string/clinic"/>
+</menu>

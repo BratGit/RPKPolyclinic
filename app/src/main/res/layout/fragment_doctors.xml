@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_doctors"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/secondary"
+        app:titleTextColor="@color/white"
+        app:title="Врачи"/>
+
+    <TextView
+        android:id="@+id/empty_list_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_list"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:fontFamily="@font/sfui_semibold"/>
+
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/doctors_rv"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@id/toolbar_doctors"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_doctor_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        app:fabSize="normal"
+        android:backgroundTint="@color/main"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:textAlignment="center"/>
+
+</RelativeLayout>

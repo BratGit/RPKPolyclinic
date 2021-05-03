@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/services_tool_bar"
+        style="@style/AppBarLabel"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/secondary"
+        app:title="Услуги"
+        app:titleTextColor="@color/white" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/services_tool_bar"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textColorHint="@color/gray"
+        android:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/sfui_light"
+            android:hint="@string/service_name"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/clinics_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clinics"
+                android:fontFamily="@font/sfui_regular"
+                android:textSize="16sp"
+                android:layout_margin="8dp"
+                android:textColor="@color/black"/>
+
+            <ProgressBar
+                android:id="@+id/clinics_loading_pb"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="8dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/hospital_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/provided_services"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/sfui_regular"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <ProgressBar
+                android:id="@+id/services_loading_pb"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="8dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/services_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

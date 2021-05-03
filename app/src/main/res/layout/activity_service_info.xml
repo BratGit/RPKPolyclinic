@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_clinic_name"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/secondary"
+        app:title="СМ-Клиника"
+        app:titleTextColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/clinic_address_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sfui_bold"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_margin="8dp"
+        tool:text="Москва, ул. Корнейчука, 28" />
+
+    <TextView
+        android:id="@+id/service_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sfui_semibold"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_margin="8dp"
+        tool:text="Лазерная коррекция зрения" />
+
+    <TextView
+        android:id="@+id/service_price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sfui_semibold"
+        tool:text="1000р"
+        android:layout_margin="8dp"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/order_service_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_main_background"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/order_service"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sfui_bold"
+        android:layout_gravity="center_horizontal"/>
+
+
+</LinearLayout>

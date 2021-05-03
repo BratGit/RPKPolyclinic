@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">RPKPolyclinic</string>
+    <string name="login">Эл. почта</string>
+    <string name="password">Пароль</string>
+    <string name="authorization">Авторизация</string>
+    <string name="no_acc">Нет аккаунта?</string>
+    <string name="you_register">Зарегистрируйтесь</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="registration">Регистрация</string>
+    <string name="repeat_password">Подтверждение пароля</string>
+    <string name="confirm_code">Код подтверждения</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="enter">Войти</string>
+    <string name="personal_info">Заполните личную информацию</string>
+    <string name="surname">Фамилия</string>
+    <string name="name">Имя</string>
+    <string name="patronymic">Отчество</string>
+    <string name="birth_date">Дата рождения</string>
+    <string name="next">Далее</string>
+
+    <string name="registration_code">Код регистрации</string>
+    <string name="your_registration_code">Ваш код для регистрации: </string>
+    <string name="confirm_code_sent_on_mail">
+        Код подтверждения отправлен на следующую эл. почту:</string>
+    <string name="code_didnt_come">Не пришёл код?</string>
+    <string name="send_again">Отправить заново</string>
+    <string name="incorrect_code">Неправльный код</string>
+    <string name="incorrect_auth">Неверный логин или пароль</string>
+    <string name="services">Услуги</string>
+    <string name="user">Личный кабинет</string>
+    <string name="ordered_services">Список заказанных услуг</string>
+    <string name="order_service">Заказать услугу</string>
+    <string name="welcome">Добро пожаловать!</string>
+    <string name="for_auth">Для продолжения авторизуйтесь</string>
+    <string name="logo">Логотип</string>
+    <string name="search">Поиск</string>
+    <string name="service_name">Наименование услуги</string>
+    <string name="provided_services">Предоставляемые услуги</string>
+    <string name="clinics">Медицинские учреждения</string>
+    <string name="clinic_register">Регистрация медицинского учреждения</string>
+    <string name="user_register">Регистрация пользователя</string>
+    <string name="to_clinic_register">Зарегистрировать медицинское учреждение</string>
+    <string name="to_user_register">Зарегистрировать пользователя</string>
+    <string name="clinic_map_choose">Выберите местоположение медицинского учреждения на карте</string>
+    <string name="or">или</string>
+    <string name="clinic_name">Наименование медицинского учреждения</string>
+    <string name="address">Адрес</string>
+    <string name="register_doctors">Зарегистрировать врачей</string>
+    <string name="doctor_register">Регистрация мед. сотрудника</string>
+    <string name="doctor_personal_info">Заполните информацию о сотруднике</string>
+    <string name="to_register">Зарегистриовать</string>
+    <string name="position">Должность</string>
+    <string name="empty_list">Список пока пуст.\nДля его пополнения нажмите +</string>
+    <string name="price">Цена</string>
+    <string name="description">Описание</string>
+    <string name="choose_photo">Выбрать фото</string>
+    <string name="record">Записать</string>
+    <string name="service_adding">Добавление услуги</string>
+    <string name="cancel">Отменить</string>
+    <string name="doctor_services">Услуги врача:</string>
+    <string name="adding_service">Добавление услуги:</string>
+    <string name="updating_service">Редактирование услуги:</string>
+
+    <string name="doctors">Врачи</string>
+    <string name="clients">Клиенты</string>
+    <string name="clinic">Клиника</string>
+
+    <!--PLACEHOLDERS-->
+    <string name="position_full_name">%1s %2s %3s %4s</string>
+    <string name="birth_date_placeholder">Дата рождения: %1s</string>
+    <string name="full_name">%1s %2s %3s</string>
+    <string name="user_photo_reference">user_photos/%1s.jpg</string>
+    <string name="service_photo_reference">service_photos/%1s.jpg</string>
+    <string name="price_placeholder">%1s₽</string>
+
+    <!--ERRORS-->
+    <string name="incorrect_email">Некорректная эл. почта!</string>
+    <string name="contains_cyrillic">Поля не могут содержать кириллицу!</string>
+    <string name="password_mismatch">Пароли не совпадают!</string>
+    <string name="empty_values">Заполните все поля!</string>
+
+    <!--MENU-->
+    <string name="menu_services">Услуги</string>
+    <string name="menu_map">Карта</string>
+    <string name="menu_me">Обо мне</string>
+
+    <string name="email_login">rpkpolyclinic@gmail.com</string>
+    <string name="email_password">y.9*8nRK</string>
+</resources>

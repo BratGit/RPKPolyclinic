@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FFF</color>
+    <color name="gray">#FEFEFE</color>
+    <color name="primary_variant">#0C7193</color>
+    <color name="white">#212121</color>
+    <color name="light_gray">#303030</color>
+    <color name="error">#B00020</color>
+    <color name="secondary">#4082F1</color>
+    <color name="main">#5ECBF1</color>
+    <color name="bottom_sec_color">#C2212121</color>
+
+    <color name="light_green">#00294A</color>
+    <color name="light_red">#570D0D</color>
+    <color name="light_purple">#230943</color>
+    <color name="light_pink">#410625</color>
+
+    <color name="text_green">#479696</color>
+    <color name="text_red">#FF1F0D</color>
+    <color name="text_purple">#6C50EE</color>
+    <color name="text_pink">#FF0393</color>
+
+    <color name="secondary_text_green">#96B8B8</color>
+    <color name="secondary_text_red">#AD8887</color>
+    <color name="secondary_text_purple">#756D9A</color>
+    <color name="secondary_text_pink">#ECA9CC</color>
+
+    <drawable name="doctor_green">@drawable/doctor_green_dark</drawable>
+    <drawable name="doctor_pink">@drawable/doctor_pink_dark</drawable>
+    <drawable name="doctor_purple">@drawable/doctor_purple_dark</drawable>
+
+    <drawable name="service_green">@drawable/service_green_dark</drawable>
+    <drawable name="service_pink">@drawable/service_pink_dark</drawable>
+    <drawable name="service_purple">@drawable/service_purple_dark</drawable>
+
+    <drawable name="hospital_green">@drawable/hospital_green_dark</drawable>
+    <drawable name="hospital_pink">@drawable/hospital_pink_dark</drawable>
+    <drawable name="hospital_purple">@drawable/hospital_purple_dark</drawable>
+
+    <drawable name="checked_green">@drawable/checked_green_dark</drawable>
+    <drawable name="checked_pink">@drawable/checked_pink_dark</drawable>
+    <drawable name="checked_purple">@drawable/checked_purple_dark</drawable>
+
+    <drawable name="ic_add">@drawable/ic_add_dark</drawable>
+    <drawable name="calendar">@drawable/ic_pick_date_dark</drawable>
+    <drawable name="medicine_ui">@drawable/medicine_dark</drawable>
+    <drawable name="log_out">@drawable/log_out_dark</drawable>
+    <drawable name="menu_services">@drawable/menu_services_dark</drawable>
+    <drawable name="menu_map">@drawable/menu_map_dark</drawable>
+    <drawable name="menu_me">@drawable/menu_me_dark</drawable>
+    <drawable name="search">@drawable/ic_search_dark</drawable>
+    <drawable name="user">@drawable/user_dark</drawable>
+</resources>

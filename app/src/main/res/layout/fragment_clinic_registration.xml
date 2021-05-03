@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/hospital_iv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/hospital_pink_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/clinic_register_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hospital_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sfui_semibold"
+        android:text="@string/clinic_register"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hospital_iv" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clinic_register_tv"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:background="@drawable/edit_text_background"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clinic_register_tv">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/sfui_light"
+            android:hint="@string/clinic_name"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="179dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/choose_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sfui_regular"
+        android:text="@string/clinic_map_choose"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_layout"/>
+
+    <fragment
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/choose_tv"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/clinic_register_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_tv" />
+
+    <Button
+        android:id="@+id/clinic_register_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mapView"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_main_background"
+        android:fontFamily="@font/sfui_semibold"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

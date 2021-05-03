@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppBarLabel"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="Иванов Иван Иванович">
+
+            <RelativeLayout
+                android:id="@+id/user_photo_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="#3C3C3C">
+
+                <com.jgabrielfreitas.core.BlurImageView
+                    android:id="@+id/blur_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:radius="24" />
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="32dp">
+
+                    <ProgressBar
+                        android:id="@+id/preload_pb"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="32dp" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_photo_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user"
+                        android:visibility="gone"
+                        app:civ_circle_background_color="@color/main" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="none" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/email_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/sfui_bold"
+                android:textColor="@color/secondary"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/full_name_text_view"
+                tool:text="email@mail.ru" />
+
+            <TextView
+                android:id="@+id/birth_date_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/sfui_semibold"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_text_view"
+                tool:text="17 августа 1985" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/sfui_semibold"
+                android:text="@string/ordered_services"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/birth_date_text_view" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ordered_services_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/exit_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/main"
+        android:baselineAlignBottom="false"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/log_out"
+        app:fabSize="normal"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="end|bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

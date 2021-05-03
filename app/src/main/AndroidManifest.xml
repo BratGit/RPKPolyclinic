@@ -37,7 +37,8 @@
         <activity android:name=".activities.MainActivity" />
         <activity
             android:name=".activities.DoctorActivity"
-            android:parentActivityName=".activities.ClinicActivity"/>
+            android:parentActivityName=".activities.ClinicActivity"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".activities.ServiceInfoActivity"
             android:parentActivityName=".activities.ServiceInfoActivity" />

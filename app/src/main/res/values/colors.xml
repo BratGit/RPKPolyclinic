@@ -14,6 +14,7 @@
     <color name="secondary">#d9225e</color>
     <color name="main">#B12341</color>
     <color name="bottom_sec_color">#C2FFFFFF</color>
+    <color name="dialog_background">#fff</color>
 
     <color name="light_green">#CDE4E4</color>
     <color name="light_red">#FFE0DB</color>
@@ -29,6 +30,10 @@
     <color name="secondary_text_red">#AD8887</color>
     <color name="secondary_text_purple">#756D9A</color>
     <color name="secondary_text_pink">#ECA9CC</color>
+
+    <drawable name="client_green">@drawable/client_green_light</drawable>
+    <drawable name="client_pink">@drawable/client_pink_light</drawable>
+    <drawable name="client_purple">@drawable/client_purple_light</drawable>
 
     <drawable name="doctor_green">@drawable/doctor_green_light</drawable>
     <drawable name="doctor_pink">@drawable/doctor_pink_light</drawable>
@@ -55,4 +60,5 @@
     <drawable name="menu_me">@drawable/menu_me_light</drawable>
     <drawable name="search">@drawable/ic_search</drawable>
     <drawable name="user">@drawable/user_light</drawable>
+    <drawable name="empty_list_animation">@drawable/empty_list_animation_light</drawable>
 </resources>

@@ -151,7 +151,7 @@ public class ServiceAddingFragment extends Fragment {
                         && !mDescription.getText().toString().trim().isEmpty()
                         && !mHasServiceId) {
                     //Recording data
-                    mReference.child("service_doctor").push()
+                    mReference.child("service_doctor").child(mServiceId)
                             .setValue(new ServiceDoctor(mServiceId,
                                     mName.getText().toString().trim(), mAuth.getUid(), mDoctorId,
                                     mDescription.getText().toString().trim(),

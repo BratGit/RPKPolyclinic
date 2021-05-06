@@ -12,6 +12,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,6 +35,7 @@ public class AuthorizationActivity extends AppCompatActivity {
     FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
     DatabaseReference mReference;
 
+    ProgressBar mProgressBar;
     ProgressDialog mProgressDialog;
     TextView register, mIncorrectAuth;
     EditText mEmailEditText, mPasswordEditText;
@@ -52,6 +54,7 @@ public class AuthorizationActivity extends AppCompatActivity {
         mIncorrectAuth = (TextView) findViewById(R.id.incorrect_auth_text_view);
         mEmailEditText = (EditText) findViewById(R.id.login);
         mPasswordEditText = (EditText) findViewById(R.id.password);
+        mProgressBar = (ProgressBar) findViewById(R.id.auth_progress_bar);
 
         checkAuthenticatedUser();
 
@@ -91,6 +94,7 @@ public class AuthorizationActivity extends AppCompatActivity {
                             authenticateClinic();
                         }
                     }
+                    mProgressBar.setVisibility(View.GONE);
                 }
 
                 @Override
@@ -98,7 +102,8 @@ public class AuthorizationActivity extends AppCompatActivity {
 
                 }
             });
-        }
+        } else
+            mProgressBar.setVisibility(View.GONE);
     }
 
     private void loginUserAccount(String email, String password) {

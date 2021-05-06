@@ -142,7 +142,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/service_pink"
+            android:src="@drawable/ic_service"
             app:layout_constraintBottom_toTopOf="@+id/record_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

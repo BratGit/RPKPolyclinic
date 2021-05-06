@@ -32,6 +32,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.SelectedUserActivity"/>
+        <activity android:name=".activities.SelectedClinicActivity"/>
         <activity android:name=".activities.RegistrationActivity" />
         <activity android:name=".activities.ClinicActivity"/>
         <activity android:name=".activities.MainActivity" />

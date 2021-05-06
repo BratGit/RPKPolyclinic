@@ -7,7 +7,6 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -30,7 +29,7 @@ public class ImageDisplayFragment extends DialogFragment {
 
     FirebaseStorage mStorage = FirebaseStorage.getInstance();
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
-    StorageReference mPhotoStorageReference;
+    StorageReference mReference;
 
     @NonNull
     @Override
@@ -50,11 +49,11 @@ public class ImageDisplayFragment extends DialogFragment {
     }
 
     private void setupPhoto(){
-        mPhotoStorageReference = mStorage.getReference()
-                .child(getString(R.string.user_photo_reference, mAuth.getUid()));
+//        mReference = mStorage.getReference()
+//                .child(getString(R.string.user_photo_reference, mAuth.getUid()));
 
 
-        mPhotoStorageReference.getBytes(2048 * 2048)
+        mReference.getBytes(2048 * 2048)
                 .addOnSuccessListener(new OnSuccessListener<byte[]>() {
                     @Override
                     public void onSuccess(byte[] bytes) {
@@ -73,5 +72,9 @@ public class ImageDisplayFragment extends DialogFragment {
 
                     }
                 });
+    }
+
+    public void setReferences(StorageReference references){
+        mReference = references;
     }
 }

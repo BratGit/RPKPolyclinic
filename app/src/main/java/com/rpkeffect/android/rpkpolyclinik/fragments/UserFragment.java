@@ -189,6 +189,7 @@ public class UserFragment extends Fragment {
                                         if (!mHasNoImage) {
                                             FragmentManager manager = getFragmentManager();
                                             ImageDisplayFragment imageDisplayFragment = new ImageDisplayFragment();
+                                            imageDisplayFragment.setReferences(mPhotoStorageReference);
                                             imageDisplayFragment.show(manager, DIALOG_IMAGE);
                                         } else
                                             Snackbar.make(v, "Изображение пользователя отсутстует",

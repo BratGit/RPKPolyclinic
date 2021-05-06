@@ -122,6 +122,13 @@
             android:textSize="16sp"
             android:theme="@style/Button.DarkRed"/>
 
+        <ProgressBar
+            android:id="@+id/auth_progress_bar"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"/>
+
         <TextView
             android:id="@+id/incorrect_auth_text_view"
             android:layout_width="wrap_content"

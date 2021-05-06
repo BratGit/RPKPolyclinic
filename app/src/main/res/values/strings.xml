@@ -50,13 +50,16 @@
     <string name="doctor_personal_info">Заполните информацию о сотруднике</string>
     <string name="to_register">Зарегистриовать</string>
     <string name="position">Должность</string>
-    <string name="empty_list">Список пока пуст.\nДля его пополнения нажмите +</string>
+    <string name="empty_list">Список пока пуст.</string>
     <string name="price">Цена</string>
     <string name="description">Описание</string>
     <string name="choose_photo">Выбрать фото</string>
     <string name="record">Записать</string>
     <string name="service_adding">Добавление услуги</string>
     <string name="cancel">Отменить</string>
+    <string name="image">Изображение</string>
+    <string name="log_out">Выйти</string>
+    <string name="to_record">Записаться</string>
     <string name="doctor_services">Услуги врача:</string>
     <string name="adding_service">Добавление услуги:</string>
     <string name="updating_service">Редактирование услуги:</string>
@@ -71,6 +74,7 @@
     <string name="full_name">%1s %2s %3s</string>
     <string name="user_photo_reference">user_photos/%1s.jpg</string>
     <string name="service_photo_reference">service_photos/%1s.jpg</string>
+    <string name="clinic_photo_reference">clinic_photos/%1s.jpg</string>
     <string name="price_placeholder">%1s₽</string>
 
     <!--ERRORS-->

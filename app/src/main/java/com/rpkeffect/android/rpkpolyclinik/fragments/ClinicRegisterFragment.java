@@ -153,14 +153,6 @@ public class ClinicRegisterFragment extends Fragment {
             List<Address> addresses = geocoder.getFromLocation(latitude, longitude, 1);
 
             if (address != null) {
-                Address returnAddress = addresses.get(0);
-//                StringBuilder stringBuilder = new StringBuilder("");
-//
-//                for (int i = 0; i < returnAddress.getMaxAddressLineIndex(); i++){
-//                    stringBuilder.append(returnAddress.getAddressLine(i)).append("\n");
-//
-//                    address = stringBuilder.toString();
-//                }
                 address = addresses.get(0).getAddressLine(0);
             } else {
                 Toast.makeText(getActivity(), "Адрес не найден", Toast.LENGTH_SHORT).show();

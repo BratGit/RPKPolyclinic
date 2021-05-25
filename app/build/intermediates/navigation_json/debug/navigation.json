@@ -1,0 +1,17 @@
+[
+  {
+    "name": "client_navigation",
+    "navigationXmlIds": [],
+    "deepLinks": []
+  },
+  {
+    "name": "clinic_navigation",
+    "navigationXmlIds": [],
+    "deepLinks": []
+  },
+  {
+    "name": "doctor_navigation",
+    "navigationXmlIds": [],
+    "deepLinks": []
+  }
+]

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/doctor_navigation"
+    app:startDestination="@id/bottom_doctor_ordered_services">
+
+    <fragment
+        android:id="@+id/bottom_doctor_ordered_services"
+        android:name="com.rpkeffect.android.rpkpolyclinik.fragments.DoctorOrderedServicesFragment"
+        tools:layout="@layout/fragment_doctor_ordered_services"
+        android:label="DoctorOrderedServicesFragment" />
+    <fragment
+        android:id="@+id/bottom_doctor_provided_services"
+        android:name="com.rpkeffect.android.rpkpolyclinik.fragments.DoctorProvidedServicesFragment"
+        tools:layout="@layout/fragment_doctor_provided_services"
+        android:label="DoctorProvidedServicesFragment" />
+    <fragment
+        android:id="@+id/bottom_doctor_info"
+        android:name="com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment"
+        tools:layout="@layout/fragment_doctor_info"
+        android:label="DoctorInfoFragment" />
+</navigation>

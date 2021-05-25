@@ -1,9 +1,7 @@
 package com.rpkeffect.android.rpkpolyclinik.fragments;
 
 import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,7 +20,7 @@ import androidx.fragment.app.Fragment;
 import com.rpkeffect.android.rpkpolyclinik.R;
 import com.rpkeffect.android.rpkpolyclinik.interfaces.CorrectCodeInsertedListener;
 import com.rpkeffect.android.rpkpolyclinik.interfaces.RegistrationCodeSentListener;
-import com.rpkeffect.android.rpkpolyclinik.mail.SendMail;
+import com.rpkeffect.android.rpkpolyclinik.utils.SendMail;
 
 import java.util.Properties;
 import java.util.Random;

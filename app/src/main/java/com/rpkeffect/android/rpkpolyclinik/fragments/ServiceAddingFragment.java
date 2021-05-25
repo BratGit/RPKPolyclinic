@@ -230,7 +230,7 @@ public class ServiceAddingFragment extends Fragment {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         mHasNoImage = true;
-                        mImageView.setImageResource(R.drawable.service_green);
+                        mImageView.setImageResource(R.drawable.ic_service);
                     }
                 });
     }

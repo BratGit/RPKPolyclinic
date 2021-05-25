@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -29,9 +30,13 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.jgabrielfreitas.core.BlurImageView;
 import com.rpkeffect.android.rpkpolyclinik.R;
-import com.rpkeffect.android.rpkpolyclinik.adapters.ServiceAdapter;
+import com.rpkeffect.android.rpkpolyclinik.adapters.ServiceDoctorAdapter;
+import com.rpkeffect.android.rpkpolyclinik.classes.Doctor;
 import com.rpkeffect.android.rpkpolyclinik.classes.Service;
+import com.rpkeffect.android.rpkpolyclinik.classes.ServiceDoctor;
 import com.rpkeffect.android.rpkpolyclinik.classes.User;
+import com.rpkeffect.android.rpkpolyclinik.classes.UserService;
+import com.rpkeffect.android.rpkpolyclinik.interfaces.ServiceDoctorAdapterListener;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -39,7 +44,7 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class SelectedUserActivity extends AppCompatActivity {
+public class SelectedUserActivity extends AppCompatActivity implements ServiceDoctorAdapterListener {
     private static final String ARG_USER_ID = "userId";
 
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -57,8 +62,9 @@ public class SelectedUserActivity extends AppCompatActivity {
     FloatingActionButton mFloatingActionButton;
 
     SimpleDateFormat mFormatter = new SimpleDateFormat("dd MMMM yyyy");
-    ServiceAdapter mAdapter;
-    List<Service> mServices;
+    List<ServiceDoctor> mServices;
+    List<Doctor> mDoctors;
+    ServiceDoctorAdapter mAdapter;
     String mUserId;
     User mUser;
     boolean mHasNoImage = false;
@@ -68,14 +74,16 @@ public class SelectedUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_user);
 
+        mServices = new ArrayList<>();
+        mDoctors = new ArrayList<>();
+
         Bundle bundle = getIntent().getExtras();
         mUserId = bundle.getString(ARG_USER_ID);
 
-        mServices = new ArrayList<>();
-        mAdapter = new ServiceAdapter(mServices, this);
         mRecyclerView = findViewById(R.id.ordered_services_recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL,
                 false));
+        mAdapter = new ServiceDoctorAdapter(mServices, mDoctors, this, this);
         mRecyclerView.setAdapter(mAdapter);
 
         mCollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
@@ -99,6 +107,37 @@ public class SelectedUserActivity extends AppCompatActivity {
                         mUser = user;
                 }
                 fillInUserData();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.child("user_service").getChildren()){
+                    UserService userService = dataSnapshot.getValue(UserService.class);
+                    if (userService.getUserId().equals(mUserId)){
+                        for (DataSnapshot doctorSnapshot : snapshot.child("employees").getChildren()){
+                            Doctor doctor = doctorSnapshot.getValue(Doctor.class);
+                            mDoctors.add(doctor);
+                            if (doctor.getClinicId().equals(mAuth.getUid())){
+                                Log.d("myLog", "onDataChange: doctor " + doctor.getPatronymic());
+                                for (DataSnapshot serviceDoctorSnapshot : snapshot.child("service_doctor").getChildren()){
+                                    ServiceDoctor serviceDoctor = serviceDoctorSnapshot.getValue(ServiceDoctor.class);
+                                    if (serviceDoctor.getId().equals(userService.getServiceId())
+                                            && serviceDoctor.getDoctorId().equals(doctor.getUID())){
+                                        mServices.add(serviceDoctor);
+                                        Log.d("myLog", "onDataChange: service " + serviceDoctor.getName());
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                mAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -149,5 +188,10 @@ public class SelectedUserActivity extends AppCompatActivity {
         Intent intent = new Intent(context, SelectedUserActivity.class);
         intent.putExtra(ARG_USER_ID, userId);
         return intent;
+    }
+
+    @Override
+    public void onItemClicked(String serviceId) {
+
     }
 }

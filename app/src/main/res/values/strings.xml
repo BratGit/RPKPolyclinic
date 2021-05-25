@@ -29,7 +29,7 @@
     <string name="services">Услуги</string>
     <string name="user">Личный кабинет</string>
     <string name="ordered_services">Список заказанных услуг</string>
-    <string name="order_service">Заказать услугу</string>
+    <string name="order_service">Записаться на приём</string>
     <string name="welcome">Добро пожаловать!</string>
     <string name="for_auth">Для продолжения авторизуйтесь</string>
     <string name="logo">Логотип</string>
@@ -59,10 +59,18 @@
     <string name="cancel">Отменить</string>
     <string name="image">Изображение</string>
     <string name="log_out">Выйти</string>
+    <string name="to_map">Посмотреть на карте</string>
+    <string name="create_query">Подать заявку на прикрепление</string>
+    <string name="query_declined">Заявка отклонена</string>
+    <string name="set_datetime">Выбрать дату и время посещения</string>
     <string name="to_record">Записаться</string>
     <string name="doctor_services">Услуги врача:</string>
     <string name="adding_service">Добавление услуги:</string>
     <string name="updating_service">Редактирование услуги:</string>
+    <string name="select_visit_date">Выберите дату посещения</string>
+    <string name="back">Назад</string>
+    <string name="ordered">Заказанные</string>
+    <string name="provided">Предоставляемые</string>
 
     <string name="doctors">Врачи</string>
     <string name="clients">Клиенты</string>
@@ -75,7 +83,19 @@
     <string name="user_photo_reference">user_photos/%1s.jpg</string>
     <string name="service_photo_reference">service_photos/%1s.jpg</string>
     <string name="clinic_photo_reference">clinic_photos/%1s.jpg</string>
+    <string name="doctor_photo_reference">doctor_photos/%1s.jpg</string>
     <string name="price_placeholder">%1s₽</string>
+    <string name="comment_decline">Причина отказа: %1s</string>
+    <string name="visit_datetime">Дата и время посещения: %1s</string>
+    <string name="service_ordered_info">Вы записались на предоставление услуги %1s.
+        Дата и время посещения %2s</string>
+    <string name="service_ordered_datetime">Вы записаны на: %1s</string>
+
+    <string name="dark_theme">Тёмная тема</string>
+    <string name="light_theme">Светлая тема</string>
+    <string name="system_color">Использовать системные настройки</string>
+    <string name="schedule">По раписанию</string>
+    <string name="theme">Настройка темы</string>
 
     <!--ERRORS-->
     <string name="incorrect_email">Некорректная эл. почта!</string>

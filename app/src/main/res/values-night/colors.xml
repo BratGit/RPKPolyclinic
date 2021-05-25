@@ -31,6 +31,9 @@
     <color name="secondary_text_purple">#756D9A</color>
     <color name="secondary_text_pink">#ECA9CC</color>
 
+    <drawable name="selected_theme">@drawable/ic_moon</drawable>
+    <drawable name="switcher">@drawable/ic_dark_mode</drawable>
+
     <drawable name="client_green">@drawable/client_green_dark</drawable>
     <drawable name="client_pink">@drawable/client_pink_dark</drawable>
     <drawable name="client_purple">@drawable/client_purple_dark</drawable>

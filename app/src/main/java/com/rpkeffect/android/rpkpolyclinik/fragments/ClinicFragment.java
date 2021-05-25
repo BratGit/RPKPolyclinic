@@ -7,7 +7,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +17,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -31,7 +28,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
@@ -46,7 +42,9 @@ import com.google.firebase.storage.UploadTask;
 import com.leinardi.android.speeddial.SpeedDialActionItem;
 import com.leinardi.android.speeddial.SpeedDialView;
 import com.rpkeffect.android.rpkpolyclinik.R;
+import com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity;
 import com.rpkeffect.android.rpkpolyclinik.classes.Clinic;
+import com.rpkeffect.android.rpkpolyclinik.dialogs.ImageDisplayFragment;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -143,7 +141,10 @@ public class ClinicFragment extends Fragment {
                         return false;
                     case R.id.exit_item:
                         mAuth.signOut();
-                        getActivity().finish();
+                        Intent i = new Intent(getActivity(), AuthorizationActivity.class);
+                        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        i.putExtra("EXIT", true);
+                        startActivity(i);
                         return false;
                     default:
                         return false;

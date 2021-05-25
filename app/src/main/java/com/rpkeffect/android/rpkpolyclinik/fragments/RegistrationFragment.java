@@ -3,9 +3,6 @@ package com.rpkeffect.android.rpkpolyclinik.fragments;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -24,14 +21,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.rpkeffect.android.rpkpolyclinik.R;
-import com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity;
-import com.rpkeffect.android.rpkpolyclinik.database.UserBaseHelper;
-import com.rpkeffect.android.rpkpolyclinik.database.UserCursorWrapper;
-import com.rpkeffect.android.rpkpolyclinik.database.UserDBSchema;
-import com.rpkeffect.android.rpkpolyclinik.database.UserDBSchema.UserTable;
 import com.rpkeffect.android.rpkpolyclinik.interfaces.CodeResendListener;
 import com.rpkeffect.android.rpkpolyclinik.interfaces.RegistrationCodeSentListener;
-import com.rpkeffect.android.rpkpolyclinik.mail.SendMail;
+import com.rpkeffect.android.rpkpolyclinik.utils.SendMail;
 
 import java.util.Properties;
 import java.util.Random;

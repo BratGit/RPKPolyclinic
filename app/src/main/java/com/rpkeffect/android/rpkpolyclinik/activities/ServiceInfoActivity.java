@@ -50,7 +50,7 @@ public class ServiceInfoActivity extends AppCompatActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_service_info);
+        setContentView(R.layout.fragment_service_info);
 
         mAuth = FirebaseAuth.getInstance();
 

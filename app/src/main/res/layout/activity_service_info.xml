@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tool="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:background="@color/white">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_clinic_name"
@@ -13,55 +13,144 @@
         android:layout_height="?android:attr/actionBarSize"
         android:background="@color/secondary"
         app:title="СМ-Клиника"
-        app:titleTextColor="@color/white"/>
+        app:titleTextColor="@color/white" />
 
-    <TextView
-        android:id="@+id/clinic_address_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/sfui_bold"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:layout_margin="8dp"
-        tool:text="Москва, ул. Корнейчука, 28" />
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_clinic_name">
 
-    <TextView
-        android:id="@+id/service_name_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/sfui_semibold"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:layout_margin="8dp"
-        tool:text="Лазерная коррекция зрения" />
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/service_price_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/sfui_semibold"
-        tool:text="1000р"
-        android:layout_margin="8dp"
-        android:textColor="@color/black"
-        android:textSize="24sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sfui_light"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:text="Адрес медицинского учреждения:" />
 
-    <Button
-        android:id="@+id/order_service_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/button_main_background"
-        android:textSize="16sp"
-        android:textColor="@color/white"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:text="@string/order_service"
-        android:textAllCaps="false"
-        android:fontFamily="@font/sfui_bold"
-        android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/clinic_address_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sfui_bold"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                tool:text="Москва, ул. Корнейчука, 28" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sfui_light"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="Наименование услуги:" />
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/service_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sfui_semibold"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                tool:text="Лазерная коррекция зрения" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sfui_light"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="Должность:" />
+
+            <TextView
+                android:id="@+id/service_doctor_position_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sfui_regular"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tool:text="Стоматолог" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sfui_light"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="ФИО врача:" />
+
+            <TextView
+                android:id="@+id/service_doctor_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sfui_regular"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tool:text="Иванов Иван Иванович" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sfui_light"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="Цена услуги:" />
+
+            <TextView
+                android:id="@+id/service_price_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sfui_regular"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tool:text="1000р" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sfui_light"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="Описание:" />
+
+            <TextView
+                android:id="@+id/service_description_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sfui_regular"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tool:text="Данная услуга..." />
+
+            <ImageView
+                android:id="@+id/service_iv"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/service_green" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

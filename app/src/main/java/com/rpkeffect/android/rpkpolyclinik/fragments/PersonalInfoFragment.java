@@ -27,6 +27,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.rpkeffect.android.rpkpolyclinik.R;
 import com.rpkeffect.android.rpkpolyclinik.classes.User;
+import com.rpkeffect.android.rpkpolyclinik.dialogs.DatePickerFragment;
 import com.rpkeffect.android.rpkpolyclinik.interfaces.UserRegisteredListener;
 
 import java.text.SimpleDateFormat;
@@ -114,10 +115,6 @@ public class PersonalInfoFragment extends Fragment {
                         && !mName.getText().toString().trim().isEmpty()
                         && !mPatronymic.getText().toString().trim().isEmpty()) {
                     mErrorTextView.setVisibility(View.GONE);
-//                    ContentValues values = getContentValues(new User(mMail, mPassword,
-//                            mSurname.getText().toString().trim(), mName.getText().toString().trim(),
-//                            mPatronymic.getText().toString().trim(), mBirthDate));
-//                    mDatabase.insert(UserTable.NAME, null, values);
                     registerNewUser(mMail, mPassword);
                 } else {
                     mErrorTextView.setVisibility(View.VISIBLE);
@@ -130,11 +127,9 @@ public class PersonalInfoFragment extends Fragment {
     }
 
     private void registerNewUser(String email, String password) {
-        // показать видимость индикатора выполнения, чтобы показать загрузку
         mProgressDialog = ProgressDialog.show(getActivity(), "Ожидайте",
                 "Регистрация", true, false);
         mProgressDialog.show();
-        // создать нового пользователя или зарегистрировать нового пользователя
         mAuth
                 .createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -154,23 +149,16 @@ public class PersonalInfoFragment extends Fragment {
                                     mBirthDate);
                             mUsers.push().setValue(user);
                         } else {
-                            // Регистрация не удалась
                             isSuccessAuth = false;
                             Toast.makeText(
                                     getActivity(),
                                     "Возникла ошибка при регистрации",
                                     Toast.LENGTH_LONG)
                                     .show();
-                            // скрываем индикатор выполнения
                         }
 
                         mProgressDialog.dismiss();
                         mListener.onUserRegistered();
-//                        FragmentManager fm = getActivity().getSupportFragmentManager();
-//                        fm
-//                                .beginTransaction()
-//                                .remove(PersonalInfoFragment.this)
-//                                .commit();
                     }
                 });
     }

@@ -25,7 +25,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBz8hhJQXDPto34mntmlRut48G6QmazBXA" />
 
-        <activity android:name=".activities.AuthorizationActivity">
+        <activity android:name=".activities.AuthorizationActivity"/>
+        <activity android:name=".activities.SplashScreen" android:theme="@style/SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,10 +36,14 @@
         <activity android:name=".activities.SelectedUserActivity"/>
         <activity android:name=".activities.SelectedClinicActivity"/>
         <activity android:name=".activities.RegistrationActivity" />
+        <activity android:name=".activities.DoctorActivity"/>
         <activity android:name=".activities.ClinicActivity"/>
         <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.OrderedServiceActivity"/>
+        <activity android:name=".activities.SelectedServiceActivity"
+            android:parentActivityName=".activities.DoctorActivity"/>
         <activity
-            android:name=".activities.DoctorActivity"
+            android:name=".activities.SelectedDoctorActivity"
             android:parentActivityName=".activities.ClinicActivity"
             android:windowSoftInputMode="adjustPan"/>
         <activity

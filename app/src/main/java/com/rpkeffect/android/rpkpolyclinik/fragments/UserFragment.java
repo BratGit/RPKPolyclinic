@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,11 +38,17 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.jgabrielfreitas.core.BlurImageView;
-import com.rpkeffect.android.rpkpolyclinik.classes.OrderedService;
+import com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity;
+import com.rpkeffect.android.rpkpolyclinik.adapters.ServiceDoctorAdapter;
+import com.rpkeffect.android.rpkpolyclinik.classes.Doctor;
 import com.rpkeffect.android.rpkpolyclinik.R;
 import com.rpkeffect.android.rpkpolyclinik.classes.Service;
+import com.rpkeffect.android.rpkpolyclinik.classes.ServiceDoctor;
 import com.rpkeffect.android.rpkpolyclinik.classes.User;
-import com.rpkeffect.android.rpkpolyclinik.adapters.ServiceAdapter;
+import com.rpkeffect.android.rpkpolyclinik.classes.UserService;
+import com.rpkeffect.android.rpkpolyclinik.dialogs.ImageDisplayFragment;
+import com.rpkeffect.android.rpkpolyclinik.interfaces.SelectedClinicListener;
+import com.rpkeffect.android.rpkpolyclinik.interfaces.ServiceDoctorAdapterListener;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -51,7 +58,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 import static android.app.Activity.RESULT_OK;
 
-public class UserFragment extends Fragment {
+public class UserFragment extends Fragment implements ServiceDoctorAdapterListener, SelectedClinicListener {
     private static final String DIALOG_IMAGE = "ImageDisplayDialog";
 
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -60,9 +67,11 @@ public class UserFragment extends Fragment {
     StorageReference mPhotoStorageReference;
     DatabaseReference mOrderedServices = database.getReference();
 
-    ServiceAdapter mServiceAdapter;
-    List<Service> mServiceList;
-    List<OrderedService> mOrderedServiceList;
+    List<ServiceDoctor> mServiceDoctors;
+    List<Doctor> mDoctorList;
+    List<UserService> mUserServices;
+
+    ServiceDoctorAdapter mAdapter;
 
     TextView mBirthDateTextView, mEmailTextView;
     CollapsingToolbarLayout mCollapsingToolbarLayout;
@@ -75,6 +84,9 @@ public class UserFragment extends Fragment {
     SimpleDateFormat mFormatter = new SimpleDateFormat("dd MMMM yyyy");
     String mUid;
     Uri mImageUri;
+
+    SelectedServiceFragment mFragment;
+    FragmentManager fm;
 
     boolean mHasNoImage = false;
 
@@ -94,6 +106,13 @@ public class UserFragment extends Fragment {
         mStorage = FirebaseStorage.getInstance();
         mPhotoStorageReference = mStorage.getReference()
                 .child(getString(R.string.user_photo_reference, mAuth.getUid()));
+
+        fm = getActivity().getSupportFragmentManager();
+
+        mDoctorList = new ArrayList<>();
+        mServiceDoctors = new ArrayList<>();
+        mUserServices = new ArrayList<>();
+        mAdapter = new ServiceDoctorAdapter(mServiceDoctors, mDoctorList, getActivity(), this);
     }
 
     @Override
@@ -108,26 +127,24 @@ public class UserFragment extends Fragment {
                         fillInUserData(user);
                     }
                 }
-                for (DataSnapshot dataSnapshot : snapshot.child("ordered_services").getChildren()) {
-                    OrderedService orderedService = dataSnapshot.getValue(OrderedService.class);
-                    if (orderedService.getUserId().equals(mUid)) {
-                        mOrderedServiceList.add(orderedService);
-                    }
-                }
-                mServiceAdapter.setServices(mServiceList);
-                mServiceAdapter.notifyDataSetChanged();
-                for (DataSnapshot userSnapshot : snapshot.child("services").getChildren()) {
-                    Service service = userSnapshot.getValue(Service.class);
-                    mOrderedServicesRecyclerView.setAdapter(mServiceAdapter);
-                    for (int i = 0; i < mOrderedServiceList.size(); i++) {
-                        if (mOrderedServiceList.get(i).getUserId().equals(mUid) &&
-                                mOrderedServiceList.get(i).getServiceId() == service.getId()) {
-                            mServiceList.add(service);
+
+                for (DataSnapshot dataSnapshot : snapshot.child("user_service").getChildren()) {
+                    UserService userService = dataSnapshot.getValue(UserService.class);
+                    if (userService.getUserId().equals(mAuth.getUid())){
+                        for (DataSnapshot serviceSnapshot : snapshot.child("service_doctor").getChildren()){
+                            ServiceDoctor serviceDoctor = serviceSnapshot.getValue(ServiceDoctor.class);
+                            if (serviceDoctor.getId().equals(userService.getServiceId())){
+                                mServiceDoctors.add(serviceDoctor);
+                            }
                         }
                     }
-                    mServiceAdapter.setServices(mServiceList);
-                    mServiceAdapter.notifyDataSetChanged();
                 }
+
+                for (DataSnapshot dataSnapshot : snapshot.child("employees").getChildren()){
+                    Doctor doctor = dataSnapshot.getValue(Doctor.class);
+                    mDoctorList.add(doctor);
+                }
+                mAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -143,15 +160,12 @@ public class UserFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_user, container, false);
 
-        mOrderedServiceList = new ArrayList<>();
-        mServiceList = new ArrayList<>();
         mUid = mAuth.getUid();
 
         mOrderedServicesRecyclerView = v.findViewById(R.id.ordered_services_recycler_view);
         mOrderedServicesRecyclerView.setLayoutManager(new LinearLayoutManager
                 (getActivity()));
-        mServiceAdapter = new ServiceAdapter(mServiceList, getActivity());
-        mOrderedServicesRecyclerView.setAdapter(mServiceAdapter);
+        mOrderedServicesRecyclerView.setAdapter(mAdapter);
 
         mBlurImageView = v.findViewById(R.id.blur_iv);
         mPreloadProgressBar = v.findViewById(R.id.preload_pb);
@@ -165,7 +179,11 @@ public class UserFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mAuth.signOut();
-                getActivity().finish();
+//                getActivity().finish();
+                Intent i = new Intent(getActivity(), AuthorizationActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                i.putExtra("EXIT", true);
+                startActivity(i);
             }
         });
 
@@ -299,5 +317,32 @@ public class UserFragment extends Fragment {
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/*");
         startActivityForResult(intent, 1);
+    }
+
+    @Override
+    public void onItemClicked(String serviceId) {
+        mFragment = SelectedServiceFragment.newInstance(serviceId, this);
+        fm
+                .beginTransaction()
+                .replace(R.id.fragment, mFragment)
+                .commit();
+    }
+
+    @Override
+    public void onServiceItemClick(String serviceId) {
+
+    }
+
+    @Override
+    public void onCancelClick() {
+        fm
+                .beginTransaction()
+                .remove(mFragment)
+                .commit();
+    }
+
+    @Override
+    public void onServiceOrdered() {
+
     }
 }

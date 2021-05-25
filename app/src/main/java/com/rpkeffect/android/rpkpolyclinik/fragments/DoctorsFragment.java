@@ -75,7 +75,8 @@ public class DoctorsFragment extends Fragment {
                 if (snapshot.exists()) {
                     for (DataSnapshot doctorSnapshot : snapshot.getChildren()){
                         Doctor doctor = doctorSnapshot.getValue(Doctor.class);
-                        mDoctorList.add(doctor);
+                        if (doctor.getClinicId().equals(mAuth.getUid()))
+                            mDoctorList.add(doctor);
                     }
                     mAdapter.setDoctors(mDoctorList);
                     mAdapter.notifyDataSetChanged();

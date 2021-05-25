@@ -33,4 +33,14 @@
         <item name="android:textColorPrimary">#fff</item>
         <item name="fontFamily">@font/sfui_semibold</item>
     </style>
+
+    <style name="DatePickerDialogStyle" parent="Theme.RPKPolyclinic">
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+
+    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splashscreen</item>
+        <item name="colorPrimaryDark">@color/primary_variant</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+    </style>
 </resources>

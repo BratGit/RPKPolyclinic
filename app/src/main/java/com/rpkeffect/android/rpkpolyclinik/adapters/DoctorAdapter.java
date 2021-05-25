@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.rpkeffect.android.rpkpolyclinik.activities.DoctorActivity;
+import com.rpkeffect.android.rpkpolyclinik.activities.SelectedDoctorActivity;
 import com.rpkeffect.android.rpkpolyclinik.classes.Doctor;
 import com.rpkeffect.android.rpkpolyclinik.R;
 
@@ -72,7 +72,7 @@ class DoctorHolder extends RecyclerView.ViewHolder
 
     @Override
     public void onClick(View v) {
-        mContext.startActivity(DoctorActivity.newIntent(mContext, mDoctor.getUID(),
+        mContext.startActivity(SelectedDoctorActivity.newIntent(mContext, mDoctor.getUID(),
                 mContext.getString(R.string.position_full_name, mDoctor.getPosition(),
                         mDoctor.getSurname(), mDoctor.getName(), mDoctor.getPatronymic())));
     }

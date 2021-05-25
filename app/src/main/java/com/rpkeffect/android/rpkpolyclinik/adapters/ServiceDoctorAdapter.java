@@ -9,15 +9,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.rpkeffect.android.rpkpolyclinik.R;
-import com.rpkeffect.android.rpkpolyclinik.activities.DoctorActivity;
 import com.rpkeffect.android.rpkpolyclinik.classes.Doctor;
 import com.rpkeffect.android.rpkpolyclinik.classes.ServiceDoctor;
-import com.rpkeffect.android.rpkpolyclinik.interfaces.DoctorServiceListener;
 import com.rpkeffect.android.rpkpolyclinik.interfaces.ServiceDoctorAdapterListener;
 
 import java.util.List;

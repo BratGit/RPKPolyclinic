@@ -2,6 +2,7 @@ package com.rpkeffect.android.rpkpolyclinik.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -12,6 +13,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -26,15 +28,19 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rpkeffect.android.rpkpolyclinik.classes.Clinic;
 import com.rpkeffect.android.rpkpolyclinik.R;
+import com.rpkeffect.android.rpkpolyclinik.classes.Doctor;
 import com.rpkeffect.android.rpkpolyclinik.classes.User;
+import com.rpkeffect.android.rpkpolyclinik.dialogs.ThemeSwitcherDialog;
 
 public class AuthorizationActivity extends AppCompatActivity {
+    private static final String DIALOG_THEME_SWITCHER = "ThemeSwitcherDialog";
     private static final String ARG_ID = "id";
 
     FirebaseAuth mAuth;
     FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
     DatabaseReference mReference;
 
+    ImageView mThemeSwitcherImageView;
     ProgressBar mProgressBar;
     ProgressDialog mProgressDialog;
     TextView register, mIncorrectAuth;
@@ -51,6 +57,18 @@ public class AuthorizationActivity extends AppCompatActivity {
         mReference = mDatabase.getReference();
 
         mAuth = FirebaseAuth.getInstance();
+
+        mThemeSwitcherImageView = findViewById(R.id.theme_switcher_iv);
+        mThemeSwitcherImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager manager = getSupportFragmentManager();
+                ThemeSwitcherDialog themeSwitcherDialog = new ThemeSwitcherDialog();
+
+                themeSwitcherDialog.show(manager, DIALOG_THEME_SWITCHER);
+            }
+        });
+
         mIncorrectAuth = (TextView) findViewById(R.id.incorrect_auth_text_view);
         mEmailEditText = (EditText) findViewById(R.id.login);
         mPasswordEditText = (EditText) findViewById(R.id.password);
@@ -82,18 +100,7 @@ public class AuthorizationActivity extends AppCompatActivity {
             mReference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    for (DataSnapshot userSnapshot : snapshot.child("users").getChildren()) {
-                        User user = userSnapshot.getValue(User.class);
-                        if (user.getEmail().equals(mAuth.getCurrentUser().getEmail())) {
-                            authenticate();
-                        }
-                    }
-                    for (DataSnapshot userSnapshot : snapshot.child("clinics_new").getChildren()) {
-                        Clinic clinic = userSnapshot.getValue(Clinic.class);
-                        if (clinic.getEmail().equals(mAuth.getCurrentUser().getEmail())) {
-                            authenticateClinic();
-                        }
-                    }
+                    auth(snapshot);
                     mProgressBar.setVisibility(View.GONE);
                 }
 
@@ -126,18 +133,7 @@ public class AuthorizationActivity extends AppCompatActivity {
                                     mReference.addValueEventListener(new ValueEventListener() {
                                         @Override
                                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                            for (DataSnapshot userSnapshot : snapshot.child("users").getChildren()) {
-                                                User user = userSnapshot.getValue(User.class);
-                                                if (user.getEmail().equals(mEmailEditText.getText().toString().trim())){
-                                                    authenticate();
-                                                }
-                                            }
-                                            for (DataSnapshot userSnapshot : snapshot.child("clinics_new").getChildren()) {
-                                                Clinic clinic = userSnapshot.getValue(Clinic.class);
-                                                if (clinic.getEmail().equals(mEmailEditText.getText().toString().trim())){
-                                                    authenticateClinic();
-                                                }
-                                            }
+                                            auth(snapshot);
                                         }
 
                                         @Override
@@ -153,6 +149,27 @@ public class AuthorizationActivity extends AppCompatActivity {
                         });
     }
 
+    private void auth(DataSnapshot snapshot) {
+        for (DataSnapshot userSnapshot : snapshot.child("users").getChildren()) {
+            User user = userSnapshot.getValue(User.class);
+            if (user.getUID().equals(mAuth.getUid())) {
+                authenticateClient();
+            }
+        }
+        for (DataSnapshot userSnapshot : snapshot.child("clinics_new").getChildren()) {
+            Clinic clinic = userSnapshot.getValue(Clinic.class);
+            if (clinic.getId().equals(mAuth.getUid())) {
+                authenticateClinic();
+            }
+        }
+        for (DataSnapshot dataSnapshot : snapshot.child("employees").getChildren()) {
+            Doctor doctor = dataSnapshot.getValue(Doctor.class);
+            if (doctor.getUID().equals(mAuth.getUid())) {
+                authenticateDoctor();
+            }
+        }
+    }
+
     private void incorrectAuthAnimation() {
         Animation anim = AnimationUtils.loadAnimation(
                 AuthorizationActivity.this,
@@ -161,13 +178,19 @@ public class AuthorizationActivity extends AppCompatActivity {
         mIncorrectAuth.startAnimation(anim);
     }
 
-    private void authenticateClinic(){
+    private void authenticateClinic() {
         Intent intent = new Intent(AuthorizationActivity.this, ClinicActivity.class);
         startActivity(intent);
 
     }
 
-    private void authenticate() {
+    private void authenticateDoctor() {
+        Intent intent = new Intent(AuthorizationActivity.this, DoctorActivity.class);
+        startActivity(intent);
+
+    }
+
+    private void authenticateClient() {
         Intent intent = new Intent(AuthorizationActivity.this,
                 MainActivity.class);
         intent.putExtra(ARG_ID, mId);

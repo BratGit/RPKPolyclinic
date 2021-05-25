@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/fragment_switcher"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_marginTop="8dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/switcher" />
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/rb_system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/system_color"
+            android:fontFamily="@font/sfui_semibold"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/rb_time"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/schedule"
+            android:fontFamily="@font/sfui_semibold"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/rb_dark"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dark_theme"
+            android:fontFamily="@font/sfui_semibold"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/rb_light"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/light_theme"
+            android:fontFamily="@font/sfui_semibold"
+            android:textColor="@color/black"/>
+
+    </RadioGroup>
+
+</LinearLayout>

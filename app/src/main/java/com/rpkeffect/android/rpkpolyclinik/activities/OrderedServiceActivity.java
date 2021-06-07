@@ -56,7 +56,7 @@ public class OrderedServiceActivity extends AppCompatActivity {
 
     boolean mUserHasNoPhoto = false, mServiceHasNoPhoto = false;
 
-    SimpleDateFormat mFormatter = new SimpleDateFormat("dd MMMM yyyy");
+    SimpleDateFormat mFormatter = new SimpleDateFormat("dd MMMM yyyy HH:mm");
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

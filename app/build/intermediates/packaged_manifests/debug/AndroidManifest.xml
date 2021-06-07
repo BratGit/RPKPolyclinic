@@ -44,9 +44,12 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBz8hhJQXDPto34mntmlRut48G6QmazBXA" />
 
-        <activity android:name="com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity" />
+        <activity
+            android:name="com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.rpkeffect.android.rpkpolyclinik.activities.SplashScreen"
+            android:screenOrientation="portrait"
             android:theme="@style/SplashScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,26 +57,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.rpkeffect.android.rpkpolyclinik.activities.SelectedUserActivity" />
-        <activity android:name="com.rpkeffect.android.rpkpolyclinik.activities.SelectedClinicActivity" />
-        <activity android:name="com.rpkeffect.android.rpkpolyclinik.activities.RegistrationActivity" />
-        <activity android:name="com.rpkeffect.android.rpkpolyclinik.activities.DoctorActivity" />
-        <activity android:name="com.rpkeffect.android.rpkpolyclinik.activities.ClinicActivity" />
-        <activity android:name="com.rpkeffect.android.rpkpolyclinik.activities.MainActivity" />
-        <activity android:name="com.rpkeffect.android.rpkpolyclinik.activities.OrderedServiceActivity" />
+        <activity
+            android:name="com.rpkeffect.android.rpkpolyclinik.activities.SelectedUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rpkeffect.android.rpkpolyclinik.activities.SelectedClinicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rpkeffect.android.rpkpolyclinik.activities.RegistrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rpkeffect.android.rpkpolyclinik.activities.DoctorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rpkeffect.android.rpkpolyclinik.activities.ClinicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rpkeffect.android.rpkpolyclinik.activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rpkeffect.android.rpkpolyclinik.activities.OrderedServiceActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.rpkeffect.android.rpkpolyclinik.activities.SelectedServiceActivity"
-            android:parentActivityName="com.rpkeffect.android.rpkpolyclinik.activities.DoctorActivity" />
+            android:parentActivityName="com.rpkeffect.android.rpkpolyclinik.activities.DoctorActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.rpkeffect.android.rpkpolyclinik.activities.SelectedDoctorActivity"
             android:parentActivityName="com.rpkeffect.android.rpkpolyclinik.activities.ClinicActivity"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.rpkeffect.android.rpkpolyclinik.activities.ServiceInfoActivity"
-            android:parentActivityName="com.rpkeffect.android.rpkpolyclinik.activities.ServiceInfoActivity" />
-        <activity
-            android:name="com.rpkeffect.android.rpkpolyclinik.activities.SelectedHospitalActivity"
-            android:parentActivityName="com.rpkeffect.android.rpkpolyclinik.activities.MainActivity" />
+            android:parentActivityName="com.rpkeffect.android.rpkpolyclinik.activities.ServiceInfoActivity"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="preloaded_fonts"

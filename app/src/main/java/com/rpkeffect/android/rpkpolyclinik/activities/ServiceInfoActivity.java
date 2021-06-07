@@ -21,7 +21,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.rpkeffect.android.rpkpolyclinik.classes.Hospital;
 import com.rpkeffect.android.rpkpolyclinik.classes.OrderedService;
 import com.rpkeffect.android.rpkpolyclinik.R;
 import com.rpkeffect.android.rpkpolyclinik.classes.Service;
@@ -103,13 +102,6 @@ public class ServiceInfoActivity extends AppCompatActivity {
                         mClinicId = service.getClinicId();
                         mServiceNameTextView.setText(service.getName());
                         mServicePriceTextView.setText(String.valueOf(service.getPrice()) + "₽");
-                    }
-                }
-                for (DataSnapshot userSnapshot : snapshot.child("clinics").getChildren()) {
-                    Hospital clinic = userSnapshot.getValue(Hospital.class);
-                    if (clinic.getId() == mClinicId) {
-                        mToolbar.setTitle(clinic.getName());
-                        mClinicAddressTextView.setText(clinic.getAddress());
                     }
                 }
             }

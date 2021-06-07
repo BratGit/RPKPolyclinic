@@ -93,6 +93,7 @@
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             android:textColorHint="@color/gray"
+            app:counterMaxLength="255"
             app:passwordToggleEnabled="true"
             app:passwordToggleTintMode="src_atop">
 

@@ -81,9 +81,6 @@ class OrderedServiceHolder extends RecyclerView.ViewHolder
     @Override
     public void onClick(View v) {
 //        if (mListener == null || mUserService == null)
-            Log.d("myLog", "onClick: mUserService " + mUserService.getServiceId());
-        Log.d("myLog", "onClick: user uid " + mUser.getUID());
-        Log.d("myLog", "onClick: service doctor " + mServiceDoctor.getName());
 
         mListener.onServiceUserClick(mUser.getUID(), mServiceDoctor.getId(), mUserService.getVisitDate());
     }

@@ -5,47 +5,35 @@ com/rpkeffect/android/rpkpolyclinik/dialogs/MapDialog.java
  com.rpkeffect.android.rpkpolyclinik.dialogs.MapDialog$1
 com/rpkeffect/android/rpkpolyclinik/activities/DoctorActivity.java
  com.rpkeffect.android.rpkpolyclinik.activities.DoctorActivity
-com/rpkeffect/android/rpkpolyclinik/fragments/DoctorPersonalInfoFragment.java
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorPersonalInfoFragment
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorPersonalInfoFragment$1
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorPersonalInfoFragment$2
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorPersonalInfoFragment$3
+com/rpkeffect/android/rpkpolyclinik/fragments/DoctorInfoFragment.java
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$1$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$2
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$3
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$4
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$5
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$6
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$7
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$7$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$8
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$8$1
 com/rpkeffect/android/rpkpolyclinik/activities/SelectedDoctorActivity.java
  com.rpkeffect.android.rpkpolyclinik.activities.SelectedDoctorActivity
 com/rpkeffect/android/rpkpolyclinik/interfaces/ServiceClickListener.java
  com.rpkeffect.android.rpkpolyclinik.interfaces.ServiceClickListener
-com/rpkeffect/android/rpkpolyclinik/fragments/SelectedServiceFragment.java
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$1
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$2
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$3
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$3$1
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$3$2
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$3$3
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$4
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$4$1
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$4$1$1
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$4$1$2
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$5
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$5$1
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$6
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$7
+com/rpkeffect/android/rpkpolyclinik/activities/AuthorizationActivity.java
+ com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity
+ com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity$1
+ com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity$2
+ com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity$3
+ com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity$4
+ com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity$5
+ com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity$5$1
 com/rpkeffect/android/rpkpolyclinik/activities/SplashScreen.java
  com.rpkeffect.android.rpkpolyclinik.activities.SplashScreen
-com/rpkeffect/android/rpkpolyclinik/classes/Hospital.java
- com.rpkeffect.android.rpkpolyclinik.classes.Hospital
-com/rpkeffect/android/rpkpolyclinik/database/UserDBSchema.java
- com.rpkeffect.android.rpkpolyclinik.database.UserDBSchema
- com.rpkeffect.android.rpkpolyclinik.database.UserDBSchema$OrderedServicesTable
- com.rpkeffect.android.rpkpolyclinik.database.UserDBSchema$OrderedServicesTable$Cols
- com.rpkeffect.android.rpkpolyclinik.database.UserDBSchema$UserTable
- com.rpkeffect.android.rpkpolyclinik.database.UserDBSchema$UserTable$Cols
-com/rpkeffect/android/rpkpolyclinik/activities/SelectedUserActivity.java
- com.rpkeffect.android.rpkpolyclinik.activities.SelectedUserActivity
- com.rpkeffect.android.rpkpolyclinik.activities.SelectedUserActivity$1
- com.rpkeffect.android.rpkpolyclinik.activities.SelectedUserActivity$2
- com.rpkeffect.android.rpkpolyclinik.activities.SelectedUserActivity$3
- com.rpkeffect.android.rpkpolyclinik.activities.SelectedUserActivity$4
+com/rpkeffect/android/rpkpolyclinik/classes/Service.java
+ com.rpkeffect.android.rpkpolyclinik.classes.Service
 com/rpkeffect/android/rpkpolyclinik/interfaces/RegistrationCodeSentListener.java
  com.rpkeffect.android.rpkpolyclinik.interfaces.RegistrationCodeSentListener
 com/rpkeffect/android/rpkpolyclinik/fragments/DoctorOrderedServicesFragment.java
@@ -91,8 +79,6 @@ com/rpkeffect/android/rpkpolyclinik/fragments/ClientsFragment.java
  com.rpkeffect.android.rpkpolyclinik.fragments.ClientsFragment$5
 com/rpkeffect/android/rpkpolyclinik/classes/OrderedService.java
  com.rpkeffect.android.rpkpolyclinik.classes.OrderedService
-com/rpkeffect/android/rpkpolyclinik/database/UserBaseHelper.java
- com.rpkeffect.android.rpkpolyclinik.database.UserBaseHelper
 com/rpkeffect/android/rpkpolyclinik/fragments/ClinicFragment.java
  com.rpkeffect.android.rpkpolyclinik.fragments.ClinicFragment
  com.rpkeffect.android.rpkpolyclinik.fragments.ClinicFragment$1
@@ -113,8 +99,6 @@ com/rpkeffect/android/rpkpolyclinik/fragments/ConfirmFragment.java
  com.rpkeffect.android.rpkpolyclinik.fragments.ConfirmFragment$2$1
  com.rpkeffect.android.rpkpolyclinik.fragments.ConfirmFragment$3
  com.rpkeffect.android.rpkpolyclinik.fragments.ConfirmFragment$3$1
-com/rpkeffect/android/rpkpolyclinik/database/ServiceCursorWrapper.java
- com.rpkeffect.android.rpkpolyclinik.database.ServiceCursorWrapper
 com/rpkeffect/android/rpkpolyclinik/interfaces/ClientsAdapterListener.java
  com.rpkeffect.android.rpkpolyclinik.interfaces.ClientsAdapterListener
 com/rpkeffect/android/rpkpolyclinik/adapters/ClientAdapter.java
@@ -124,58 +108,39 @@ com/rpkeffect/android/rpkpolyclinik/dialogs/ImageDisplayFragment.java
  com.rpkeffect.android.rpkpolyclinik.dialogs.ImageDisplayFragment
  com.rpkeffect.android.rpkpolyclinik.dialogs.ImageDisplayFragment$1
  com.rpkeffect.android.rpkpolyclinik.dialogs.ImageDisplayFragment$2
-com/rpkeffect/android/rpkpolyclinik/fragments/UserFragment.java
- com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment
- com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$1
- com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$2
- com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$3
- com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$3$1
- com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$4
- com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$4$1
- com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$5
- com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$5$1
- com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$6
- com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$7
+com/rpkeffect/android/rpkpolyclinik/utils/SendMail.java
+ com.rpkeffect.android.rpkpolyclinik.utils.SendMail
 com/rpkeffect/android/rpkpolyclinik/interfaces/ClinicAdapterListener.java
  com.rpkeffect.android.rpkpolyclinik.interfaces.ClinicAdapterListener
-com/rpkeffect/android/rpkpolyclinik/activities/SelectedServiceActivity.java
- com.rpkeffect.android.rpkpolyclinik.activities.SelectedServiceActivity
- com.rpkeffect.android.rpkpolyclinik.activities.SelectedServiceActivity$1
+com/rpkeffect/android/rpkpolyclinik/dialogs/ThemeSwitcherDialog.java
+ com.rpkeffect.android.rpkpolyclinik.dialogs.ThemeSwitcherDialog
+ com.rpkeffect.android.rpkpolyclinik.dialogs.ThemeSwitcherDialog$1
+ com.rpkeffect.android.rpkpolyclinik.dialogs.ThemeSwitcherDialog$2
+ com.rpkeffect.android.rpkpolyclinik.dialogs.ThemeSwitcherDialog$3
+ com.rpkeffect.android.rpkpolyclinik.dialogs.ThemeSwitcherDialog$4
 com/rpkeffect/android/rpkpolyclinik/activities/SelectedClinicActivity.java
  com.rpkeffect.android.rpkpolyclinik.activities.SelectedClinicActivity
-com/rpkeffect/android/rpkpolyclinik/fragments/DoctorProvidedServicesFragment.java
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorProvidedServicesFragment
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorProvidedServicesFragment$1
+com/rpkeffect/android/rpkpolyclinik/interfaces/SelectedClinicListener.java
+ com.rpkeffect.android.rpkpolyclinik.interfaces.SelectedClinicListener
 com/rpkeffect/android/rpkpolyclinik/interfaces/DoctorServiceListener.java
  com.rpkeffect.android.rpkpolyclinik.interfaces.DoctorServiceListener
-com/rpkeffect/android/rpkpolyclinik/database/UserCursorWrapper.java
- com.rpkeffect.android.rpkpolyclinik.database.UserCursorWrapper
 com/rpkeffect/android/rpkpolyclinik/interfaces/CodeResendListener.java
  com.rpkeffect.android.rpkpolyclinik.interfaces.CodeResendListener
-com/rpkeffect/android/rpkpolyclinik/adapters/DoctorAdapter.java
- com.rpkeffect.android.rpkpolyclinik.adapters.DoctorAdapter
- com.rpkeffect.android.rpkpolyclinik.adapters.DoctorHolder
-com/rpkeffect/android/rpkpolyclinik/fragments/RegistrationFragment.java
- com.rpkeffect.android.rpkpolyclinik.fragments.RegistrationFragment
- com.rpkeffect.android.rpkpolyclinik.fragments.RegistrationFragment$1
- com.rpkeffect.android.rpkpolyclinik.fragments.RegistrationFragment$1$1
- com.rpkeffect.android.rpkpolyclinik.fragments.RegistrationFragment$2
- com.rpkeffect.android.rpkpolyclinik.fragments.RegistrationFragment$2$1
-com/rpkeffect/android/rpkpolyclinik/fragments/SelectedClinicFragment.java
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedClinicFragment
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedClinicFragment$1
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedClinicFragment$1$1
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedClinicFragment$2
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedClinicFragment$3
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedClinicFragment$4
- com.rpkeffect.android.rpkpolyclinik.fragments.SelectedClinicFragment$5
+com/rpkeffect/android/rpkpolyclinik/adapters/ClinicAdapter.java
+ com.rpkeffect.android.rpkpolyclinik.adapters.ClinicAdapter
+ com.rpkeffect.android.rpkpolyclinik.adapters.ClinicHolder
+com/rpkeffect/android/rpkpolyclinik/fragments/DoctorServicesFragment.java
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorServicesFragment
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorServicesFragment$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorServicesFragment$2
+com/rpkeffect/android/rpkpolyclinik/utils/SaveState.java
+ com.rpkeffect.android.rpkpolyclinik.utils.SaveState
 com/rpkeffect/android/rpkpolyclinik/BuildConfig.java
  com.rpkeffect.android.rpkpolyclinik.BuildConfig
 com/rpkeffect/android/rpkpolyclinik/classes/UserClinic.java
  com.rpkeffect.android.rpkpolyclinik.classes.UserClinic
-com/rpkeffect/android/rpkpolyclinik/adapters/ServiceDoctorAdapter.java
- com.rpkeffect.android.rpkpolyclinik.adapters.ServiceDoctorAdapter
- com.rpkeffect.android.rpkpolyclinik.adapters.ServiceDoctorHolder
+com/rpkeffect/android/rpkpolyclinik/interfaces/UserRegisteredListener.java
+ com.rpkeffect.android.rpkpolyclinik.interfaces.UserRegisteredListener
 com/rpkeffect/android/rpkpolyclinik/activities/ClinicActivity.java
  com.rpkeffect.android.rpkpolyclinik.activities.ClinicActivity
 com/rpkeffect/android/rpkpolyclinik/activities/OrderedServiceActivity.java
@@ -190,75 +155,101 @@ com/rpkeffect/android/rpkpolyclinik/activities/OrderedServiceActivity.java
 com/rpkeffect/android/rpkpolyclinik/adapters/OrderedServiceAdapter.java
  com.rpkeffect.android.rpkpolyclinik.adapters.OrderedServiceAdapter
  com.rpkeffect.android.rpkpolyclinik.adapters.OrderedServiceHolder
-com/rpkeffect/android/rpkpolyclinik/fragments/ServicesFragment.java
- com.rpkeffect.android.rpkpolyclinik.fragments.ServicesFragment
- com.rpkeffect.android.rpkpolyclinik.fragments.ServicesFragment$1
- com.rpkeffect.android.rpkpolyclinik.fragments.ServicesFragment$2
-com/rpkeffect/android/rpkpolyclinik/fragments/DoctorServicesFragment.java
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorServicesFragment
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorServicesFragment$1
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorServicesFragment$2
-com/rpkeffect/android/rpkpolyclinik/activities/AuthorizationActivity.java
- com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity
- com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity$1
- com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity$2
- com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity$3
- com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity$4
- com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity$5
- com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity$5$1
-com/rpkeffect/android/rpkpolyclinik/interfaces/CorrectCodeInsertedListener.java
- com.rpkeffect.android.rpkpolyclinik.interfaces.CorrectCodeInsertedListener
-com/rpkeffect/android/rpkpolyclinik/fragments/DoctorInfoFragment.java
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$1
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$1$1
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$2
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$3
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$4
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$5
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$6
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$7
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$7$1
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$8
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorInfoFragment$8$1
-com/rpkeffect/android/rpkpolyclinik/classes/ServiceDoctor.java
- com.rpkeffect.android.rpkpolyclinik.classes.ServiceDoctor
+com/rpkeffect/android/rpkpolyclinik/dialogs/DatePickerFragment.java
+ com.rpkeffect.android.rpkpolyclinik.dialogs.DatePickerFragment
+ com.rpkeffect.android.rpkpolyclinik.dialogs.DatePickerFragment$1
 com/rpkeffect/android/rpkpolyclinik/activities/ServiceInfoActivity.java
  com.rpkeffect.android.rpkpolyclinik.activities.ServiceInfoActivity
  com.rpkeffect.android.rpkpolyclinik.activities.ServiceInfoActivity$1
  com.rpkeffect.android.rpkpolyclinik.activities.ServiceInfoActivity$2
-com/rpkeffect/android/rpkpolyclinik/dialogs/DatePickerFragment.java
- com.rpkeffect.android.rpkpolyclinik.dialogs.DatePickerFragment
- com.rpkeffect.android.rpkpolyclinik.dialogs.DatePickerFragment$1
-com/rpkeffect/android/rpkpolyclinik/activities/RegistrationActivity.java
- com.rpkeffect.android.rpkpolyclinik.activities.RegistrationActivity
-com/rpkeffect/android/rpkpolyclinik/classes/Service.java
- com.rpkeffect.android.rpkpolyclinik.classes.Service
+com/rpkeffect/android/rpkpolyclinik/classes/ServiceDoctor.java
+ com.rpkeffect.android.rpkpolyclinik.classes.ServiceDoctor
+com/rpkeffect/android/rpkpolyclinik/interfaces/CorrectCodeInsertedListener.java
+ com.rpkeffect.android.rpkpolyclinik.interfaces.CorrectCodeInsertedListener
+com/rpkeffect/android/rpkpolyclinik/fragments/UserFragment.java
+ com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment
+ com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$2
+ com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$2$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$2$2
+ com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$3
+ com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$4
+ com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$4$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$5
+ com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$5$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$6
+ com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$6$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$7
+ com.rpkeffect.android.rpkpolyclinik.fragments.UserFragment$8
+com/rpkeffect/android/rpkpolyclinik/activities/SelectedUserActivity.java
+ com.rpkeffect.android.rpkpolyclinik.activities.SelectedUserActivity
+ com.rpkeffect.android.rpkpolyclinik.activities.SelectedUserActivity$1
+ com.rpkeffect.android.rpkpolyclinik.activities.SelectedUserActivity$2
+ com.rpkeffect.android.rpkpolyclinik.activities.SelectedUserActivity$3
+ com.rpkeffect.android.rpkpolyclinik.activities.SelectedUserActivity$4
+com/rpkeffect/android/rpkpolyclinik/activities/SelectedServiceActivity.java
+ com.rpkeffect.android.rpkpolyclinik.activities.SelectedServiceActivity
+ com.rpkeffect.android.rpkpolyclinik.activities.SelectedServiceActivity$1
+ com.rpkeffect.android.rpkpolyclinik.activities.SelectedServiceActivity$2
+ com.rpkeffect.android.rpkpolyclinik.activities.SelectedServiceActivity$3
+com/rpkeffect/android/rpkpolyclinik/fragments/DoctorProvidedServicesFragment.java
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorProvidedServicesFragment
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorProvidedServicesFragment$1
 com/rpkeffect/android/rpkpolyclinik/classes/Doctor.java
  com.rpkeffect.android.rpkpolyclinik.classes.Doctor
-com/rpkeffect/android/rpkpolyclinik/utils/SaveState.java
- com.rpkeffect.android.rpkpolyclinik.utils.SaveState
-com/rpkeffect/android/rpkpolyclinik/adapters/ClinicAdapter.java
- com.rpkeffect.android.rpkpolyclinik.adapters.ClinicAdapter
- com.rpkeffect.android.rpkpolyclinik.adapters.ClinicHolder
+com/rpkeffect/android/rpkpolyclinik/fragments/RegistrationFragment.java
+ com.rpkeffect.android.rpkpolyclinik.fragments.RegistrationFragment
+ com.rpkeffect.android.rpkpolyclinik.fragments.RegistrationFragment$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.RegistrationFragment$1$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.RegistrationFragment$2
+ com.rpkeffect.android.rpkpolyclinik.fragments.RegistrationFragment$2$1
+com/rpkeffect/android/rpkpolyclinik/adapters/DoctorAdapter.java
+ com.rpkeffect.android.rpkpolyclinik.adapters.DoctorAdapter
+ com.rpkeffect.android.rpkpolyclinik.adapters.DoctorHolder
+com/rpkeffect/android/rpkpolyclinik/fragments/SelectedClinicFragment.java
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedClinicFragment
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedClinicFragment$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedClinicFragment$1$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedClinicFragment$2
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedClinicFragment$3
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedClinicFragment$4
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedClinicFragment$5
+com/rpkeffect/android/rpkpolyclinik/adapters/ServiceDoctorAdapter.java
+ com.rpkeffect.android.rpkpolyclinik.adapters.ServiceDoctorAdapter
+ com.rpkeffect.android.rpkpolyclinik.adapters.ServiceDoctorHolder
+com/rpkeffect/android/rpkpolyclinik/fragments/DoctorsFragment.java
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorsFragment
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorsFragment$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorsFragment$2
+com/rpkeffect/android/rpkpolyclinik/fragments/SelectedServiceFragment.java
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$2
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$3
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$3$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$3$2
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$3$3
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$4
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$4$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$4$1$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$4$1$2
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$5
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$5$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$6
+ com.rpkeffect.android.rpkpolyclinik.fragments.SelectedServiceFragment$7
+com/rpkeffect/android/rpkpolyclinik/fragments/ServicesFragment.java
+ com.rpkeffect.android.rpkpolyclinik.fragments.ServicesFragment
+ com.rpkeffect.android.rpkpolyclinik.fragments.ServicesFragment$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.ServicesFragment$2
 com/rpkeffect/android/rpkpolyclinik/fragments/PersonalInfoFragment.java
  com.rpkeffect.android.rpkpolyclinik.fragments.PersonalInfoFragment
  com.rpkeffect.android.rpkpolyclinik.fragments.PersonalInfoFragment$1
  com.rpkeffect.android.rpkpolyclinik.fragments.PersonalInfoFragment$2
  com.rpkeffect.android.rpkpolyclinik.fragments.PersonalInfoFragment$3
-com/rpkeffect/android/rpkpolyclinik/interfaces/UserRegisteredListener.java
- com.rpkeffect.android.rpkpolyclinik.interfaces.UserRegisteredListener
-com/rpkeffect/android/rpkpolyclinik/interfaces/SelectedClinicListener.java
- com.rpkeffect.android.rpkpolyclinik.interfaces.SelectedClinicListener
-com/rpkeffect/android/rpkpolyclinik/dialogs/ThemeSwitcherDialog.java
- com.rpkeffect.android.rpkpolyclinik.dialogs.ThemeSwitcherDialog
- com.rpkeffect.android.rpkpolyclinik.dialogs.ThemeSwitcherDialog$1
- com.rpkeffect.android.rpkpolyclinik.dialogs.ThemeSwitcherDialog$2
- com.rpkeffect.android.rpkpolyclinik.dialogs.ThemeSwitcherDialog$3
- com.rpkeffect.android.rpkpolyclinik.dialogs.ThemeSwitcherDialog$4
-com/rpkeffect/android/rpkpolyclinik/fragments/DoctorsFragment.java
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorsFragment
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorsFragment$1
- com.rpkeffect.android.rpkpolyclinik.fragments.DoctorsFragment$2
-com/rpkeffect/android/rpkpolyclinik/utils/SendMail.java
- com.rpkeffect.android.rpkpolyclinik.utils.SendMail
+com/rpkeffect/android/rpkpolyclinik/activities/RegistrationActivity.java
+ com.rpkeffect.android.rpkpolyclinik.activities.RegistrationActivity
+com/rpkeffect/android/rpkpolyclinik/fragments/DoctorPersonalInfoFragment.java
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorPersonalInfoFragment
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorPersonalInfoFragment$1
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorPersonalInfoFragment$2
+ com.rpkeffect.android.rpkpolyclinik.fragments.DoctorPersonalInfoFragment$3

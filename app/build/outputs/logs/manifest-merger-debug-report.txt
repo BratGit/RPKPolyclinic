@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-61:12
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-70:12
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\Ilya\.gradle\caches\transforms-2\files-2.1\0d2cc8a776c7b320a752b689eead5e1a\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.leinardi.android:speed-dial:3.1.1] C:\Users\Ilya\.gradle\caches\transforms-2\files-2.1\5e8deda3d2534cbdff5c43c97a40b4df\jetified-speed-dial-3.1.1\AndroidManifest.xml:17:1-26:12
 MERGED from [com.google.android.material:material:1.4.0-alpha02] C:\Users\Ilya\.gradle\caches\transforms-2\files-2.1\ada85eb406c5312d6c388613b50ea1f8\material-1.4.0-alpha02\AndroidManifest.xml:17:1-24:12
@@ -65,20 +65,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Ilya\.gr
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Ilya\.gradle\caches\transforms-2\files-2.1\f74865da85a7a70a13fd763f363f9a39\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Ilya\.gradle\caches\transforms-2\files-2.1\8275c6f89d23e4cfe8d5dd5efa714638\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [pl.droidsonroids.relinker:relinker:1.4.1] C:\Users\Ilya\.gradle\caches\transforms-2\files-2.1\cd2a866581270811f5ca2b888cf5de5b\jetified-relinker-1.4.1\AndroidManifest.xml:2:1-7:12
-INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-61:12
-INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-70:12
 	package
 		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:3:5-50
 		INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml
 		INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-61:12
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-70:12
 		INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-61:12
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:1-70:12
 		INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:2:11-69
@@ -127,7 +127,7 @@ ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:11:
 	android:name
 		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:11:22-76
 application
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:13:5-59:19
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:13:5-68:19
 MERGED from [com.google.android.material:material:1.4.0-alpha02] C:\Users\Ilya\.gradle\caches\transforms-2\files-2.1\ada85eb406c5312d6c388613b50ea1f8\material-1.4.0-alpha02\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0-alpha02] C:\Users\Ilya\.gradle\caches\transforms-2\files-2.1\ada85eb406c5312d6c388613b50ea1f8\material-1.4.0-alpha02\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Ilya\.gradle\caches\transforms-2\files-2.1\006b46906b2f770011761845d9282045\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -189,85 +189,103 @@ ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:24:
 	android:name
 		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:25:13-58
 activity#com.rpkeffect.android.rpkpolyclinik.activities.AuthorizationActivity
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:28:9-69
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:28:9-29:51
+	android:screenOrientation
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:29:13-49
 	android:name
 		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:28:19-67
 activity#com.rpkeffect.android.rpkpolyclinik.activities.SplashScreen
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:29:9-35:20
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:30:9-37:20
+	android:screenOrientation
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:31:13-49
 	android:theme
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:29:59-94
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:30:59-94
 	android:name
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:29:19-58
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:30:19-58
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:30:13-34:29
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:32:13-36:29
 action#android.intent.action.MAIN
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:31:17-69
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:33:17-69
 	android:name
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:31:25-66
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:33:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:33:17-77
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:35:17-77
 	android:name
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:33:27-74
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:35:27-74
 activity#com.rpkeffect.android.rpkpolyclinik.activities.SelectedUserActivity
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:36:9-68
-	android:name
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:36:19-66
-activity#com.rpkeffect.android.rpkpolyclinik.activities.SelectedClinicActivity
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:37:9-70
-	android:name
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:37:19-68
-activity#com.rpkeffect.android.rpkpolyclinik.activities.RegistrationActivity
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:38:9-69
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:38:9-39:51
+	android:screenOrientation
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:39:13-49
 	android:name
 		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:38:19-66
+activity#com.rpkeffect.android.rpkpolyclinik.activities.SelectedClinicActivity
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:40:9-41:51
+	android:screenOrientation
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:41:13-49
+	android:name
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:40:19-68
+activity#com.rpkeffect.android.rpkpolyclinik.activities.RegistrationActivity
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:42:9-43:51
+	android:screenOrientation
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:43:13-49
+	android:name
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:42:19-66
 activity#com.rpkeffect.android.rpkpolyclinik.activities.DoctorActivity
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:39:9-62
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:44:9-45:51
+	android:screenOrientation
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:45:13-49
 	android:name
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:39:19-60
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:44:19-60
 activity#com.rpkeffect.android.rpkpolyclinik.activities.ClinicActivity
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:40:9-62
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:46:9-47:51
+	android:screenOrientation
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:47:13-49
 	android:name
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:40:19-60
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:46:19-60
 activity#com.rpkeffect.android.rpkpolyclinik.activities.MainActivity
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:41:9-61
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:48:9-49:51
+	android:screenOrientation
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:49:13-49
 	android:name
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:41:19-58
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:48:19-58
 activity#com.rpkeffect.android.rpkpolyclinik.activities.OrderedServiceActivity
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:42:9-70
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:50:9-51:51
+	android:screenOrientation
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:51:13-49
 	android:name
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:42:19-68
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:50:19-68
 activity#com.rpkeffect.android.rpkpolyclinik.activities.SelectedServiceActivity
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:43:9-44:70
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:52:9-54:51
+	android:screenOrientation
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:54:13-49
 	android:parentActivityName
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:44:13-68
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:53:13-68
 	android:name
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:43:19-69
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:52:19-69
 activity#com.rpkeffect.android.rpkpolyclinik.activities.SelectedDoctorActivity
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:45:9-48:54
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:55:9-59:51
+	android:screenOrientation
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:59:13-49
 	android:parentActivityName
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:47:13-68
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:57:13-68
 	android:windowSoftInputMode
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:48:13-52
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:58:13-52
 	android:name
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:46:13-62
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:56:13-62
 activity#com.rpkeffect.android.rpkpolyclinik.activities.ServiceInfoActivity
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:49:9-51:76
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:60:9-63:51
+	android:screenOrientation
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:63:13-49
 	android:parentActivityName
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:51:13-73
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:62:13-73
 	android:name
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:50:13-59
-activity#com.rpkeffect.android.rpkpolyclinik.activities.SelectedHospitalActivity
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:52:9-54:69
-	android:parentActivityName
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:54:13-66
-	android:name
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:53:13-64
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:61:13-59
 meta-data#preloaded_fonts
-ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:56:9-58:57
+ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:65:9-67:57
 	android:resource
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:58:13-54
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:67:13-54
 	android:name
-		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:57:13-43
+		ADDED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml:66:13-43
 uses-sdk
 INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\AndroidLearning\RPKPolyclinik\app\src\main\AndroidManifest.xml

@@ -76,7 +76,7 @@ public class SelectedServiceFragment extends Fragment {
     Doctor mDoctor;
     Clinic mClinic;
     Date mDate;
-    boolean mHasNoImage = false;
+    boolean mHasNoImage = false, mIsConnectExist = false;
 
     SelectedClinicListener mListener;
 
@@ -182,6 +182,7 @@ public class SelectedServiceFragment extends Fragment {
                     }
                 }
                 for (DataSnapshot dataSnapshot : snapshot.child("clinics_new").getChildren()) {
+                    mIsConnectExist = false;
                     Clinic clinic = dataSnapshot.getValue(Clinic.class);
                     if (clinic.getId().equals(mClinicId)) {
                         mClinic = clinic;
@@ -193,12 +194,14 @@ public class SelectedServiceFragment extends Fragment {
                                     && getActivity() != null){
                                 mOrderButton.setEnabled(true);
                                 mOrderButton.setText(getString(R.string.order_service));
+                                mIsConnectExist = true;
                             } else if (userClinic.getClinicId().equals(mClinicId)
                                     && userClinic.getUserId().equals(mAuth.getUid())
                                     && userClinic.getStatus() == UserClinic.STATUS_DECLINE){
                                 mOrderButton.setEnabled(false);
                                 mOrderButton.setText("Ваша заявка на прикрепление отклонена");
-                            } else if (userClinic.getClinicId().equals(mClinicId)){
+                                mIsConnectExist = true;
+                            } else if (userClinic.getClinicId().equals(mClinicId) && !mIsConnectExist){
                                 mOrderButton.setEnabled(false);
                                 mOrderButton.setText("Вы не прикреплены к данному учреждению");
                             }

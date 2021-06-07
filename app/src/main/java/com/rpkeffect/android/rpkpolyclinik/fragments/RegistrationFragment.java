@@ -38,7 +38,6 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class RegistrationFragment extends Fragment implements RegistrationCodeSentListener {
-
     private final static int STATUS_START_SENDING = 0;
     private static final int STATUS_SUCCESS_SENDING = 1;
     private static final int STATUS_FAIL_SENDING = 2;

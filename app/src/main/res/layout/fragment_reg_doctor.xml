@@ -35,6 +35,7 @@
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             android:layout_marginBottom="8dp"
+            app:counterMaxLength="50"
             android:textColorHint="@color/gray">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -58,6 +59,7 @@
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             android:layout_marginBottom="8dp"
+            app:counterMaxLength="50"
             android:textColorHint="@color/gray">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -81,6 +83,7 @@
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             android:layout_marginBottom="8dp"
+            app:counterMaxLength="50"
             android:textColorHint="@color/gray">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -104,6 +107,7 @@
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             android:layout_marginBottom="8dp"
+            app:counterMaxLength="255"
             android:textColorHint="@color/gray">
 
             <com.google.android.material.textfield.TextInputEditText

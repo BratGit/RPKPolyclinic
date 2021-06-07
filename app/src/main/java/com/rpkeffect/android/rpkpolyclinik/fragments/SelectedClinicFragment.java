@@ -253,16 +253,6 @@ public class SelectedClinicFragment extends Fragment implements ServiceDoctorAda
                 });
     }
 
-//    private void setMarker(LatLng latLng, GoogleMap googleMap){
-//        MarkerOptions markerOptions = new MarkerOptions();
-//        markerOptions
-//                .position(mLatLng)
-//                .title(mAddressTextView.getText().toString().trim());
-//        googleMap.clear();
-//        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
-//        googleMap.addMarker(markerOptions);
-//    }
-
     public static SelectedClinicFragment newInstance(String clinicId, SelectedClinicListener listener) {
         SelectedClinicFragment fragment = new SelectedClinicFragment();
         Bundle bundle = new Bundle();

@@ -2,16 +2,19 @@ package com.rpkeffect.android.rpkpolyclinik.fragments;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -73,7 +76,7 @@ public class UserFragment extends Fragment implements ServiceDoctorAdapterListen
 
     ServiceDoctorAdapter mAdapter;
 
-    TextView mBirthDateTextView, mEmailTextView;
+    TextView mBirthDateTextView, mEmailTextView, mChangeInfoTextView;
     CollapsingToolbarLayout mCollapsingToolbarLayout;
     FloatingActionButton mExitFAB;
     RecyclerView mOrderedServicesRecyclerView;
@@ -84,6 +87,8 @@ public class UserFragment extends Fragment implements ServiceDoctorAdapterListen
     SimpleDateFormat mFormatter = new SimpleDateFormat("dd MMMM yyyy");
     String mUid;
     Uri mImageUri;
+    String mUserKey;
+    User mUser;
 
     SelectedServiceFragment mFragment;
     FragmentManager fm;
@@ -124,23 +129,25 @@ public class UserFragment extends Fragment implements ServiceDoctorAdapterListen
                 for (DataSnapshot userSnapshot : snapshot.child("users").getChildren()) {
                     User user = userSnapshot.getValue(User.class);
                     if (user.getUID().equals(mUid)) {
-                        fillInUserData(user);
+                        mUserKey = userSnapshot.getKey();
+                        mUser = user;
+                        fillInUserData(mUser);
                     }
                 }
 
                 for (DataSnapshot dataSnapshot : snapshot.child("user_service").getChildren()) {
                     UserService userService = dataSnapshot.getValue(UserService.class);
-                    if (userService.getUserId().equals(mAuth.getUid())){
-                        for (DataSnapshot serviceSnapshot : snapshot.child("service_doctor").getChildren()){
+                    if (userService.getUserId().equals(mAuth.getUid())) {
+                        for (DataSnapshot serviceSnapshot : snapshot.child("service_doctor").getChildren()) {
                             ServiceDoctor serviceDoctor = serviceSnapshot.getValue(ServiceDoctor.class);
-                            if (serviceDoctor.getId().equals(userService.getServiceId())){
+                            if (serviceDoctor.getId().equals(userService.getServiceId())) {
                                 mServiceDoctors.add(serviceDoctor);
                             }
                         }
                     }
                 }
 
-                for (DataSnapshot dataSnapshot : snapshot.child("employees").getChildren()){
+                for (DataSnapshot dataSnapshot : snapshot.child("employees").getChildren()) {
                     Doctor doctor = dataSnapshot.getValue(Doctor.class);
                     mDoctorList.add(doctor);
                 }
@@ -160,6 +167,8 @@ public class UserFragment extends Fragment implements ServiceDoctorAdapterListen
                              @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_user, container, false);
 
+
+
         mUid = mAuth.getUid();
 
         mOrderedServicesRecyclerView = v.findViewById(R.id.ordered_services_recycler_view);
@@ -169,6 +178,41 @@ public class UserFragment extends Fragment implements ServiceDoctorAdapterListen
 
         mBlurImageView = v.findViewById(R.id.blur_iv);
         mPreloadProgressBar = v.findViewById(R.id.preload_pb);
+
+        mChangeInfoTextView = v.findViewById(R.id.change_info_tv);
+        mChangeInfoTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View dialogView = inflater.inflate(R.layout.dialog_user_info_change, container, false);
+                EditText surnameET, nameET, patronymicET;
+                surnameET = dialogView.findViewById(R.id.surname_et);
+                nameET = dialogView.findViewById(R.id.name_et);
+                patronymicET = dialogView.findViewById(R.id.patronymic_et);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder
+                        .setView(dialogView)
+                        .setTitle("Редактирование информации о пользователе")
+                        .setPositiveButton("Ок", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                mOrderedServices.child("users").child(mUserKey).setValue(new User(mAuth.getUid(), mUser.getEmail(),
+                                        TextUtils.isEmpty(surnameET.getText().toString()) ? mUser.getSurname() : surnameET.getText().toString().trim(),
+                                        TextUtils.isEmpty(nameET.getText().toString()) ? mUser.getName() : nameET.getText().toString().trim(),
+                                        TextUtils.isEmpty(patronymicET.getText().toString()) ? mUser.getPatronymic() : patronymicET.getText().toString().trim(),
+                                        mUser.getBirthDate()));
+                            }
+                        })
+                        .setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        })
+
+                        .show();
+            }
+        });
 
         mBirthDateTextView = v.findViewById(R.id.birth_date_text_view);
         mEmailTextView = v.findViewById(R.id.email_text_view);

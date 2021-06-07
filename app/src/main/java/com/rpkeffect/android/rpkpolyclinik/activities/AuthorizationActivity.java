@@ -2,6 +2,7 @@ package com.rpkeffect.android.rpkpolyclinik.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.FragmentManager;
 
 import android.app.ProgressDialog;
@@ -31,6 +32,7 @@ import com.rpkeffect.android.rpkpolyclinik.R;
 import com.rpkeffect.android.rpkpolyclinik.classes.Doctor;
 import com.rpkeffect.android.rpkpolyclinik.classes.User;
 import com.rpkeffect.android.rpkpolyclinik.dialogs.ThemeSwitcherDialog;
+import com.rpkeffect.android.rpkpolyclinik.utils.SaveState;
 
 public class AuthorizationActivity extends AppCompatActivity {
     private static final String DIALOG_THEME_SWITCHER = "ThemeSwitcherDialog";
@@ -48,11 +50,14 @@ public class AuthorizationActivity extends AppCompatActivity {
     Button mAuthButton;
 
     int mId;
+    private SaveState saveState;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authorization);
+
+        switchTheme();
 
         mReference = mDatabase.getReference();
 
@@ -195,5 +200,17 @@ public class AuthorizationActivity extends AppCompatActivity {
                 MainActivity.class);
         intent.putExtra(ARG_ID, mId);
         startActivity(intent);
+    }
+
+    private void switchTheme(){
+        saveState = new SaveState(this);
+        if (saveState.getState() == saveState.DARK_MODE_YES)
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        else if (saveState.getState() == saveState.DARK_MODE_NO)
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        else if (saveState.getState() == saveState.DARK_MODE_USE_SYSTEM)
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+        else if (saveState.getState() == saveState.DARK_MODE_TIME)
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_TIME);
     }
 }

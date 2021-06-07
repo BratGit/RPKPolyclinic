@@ -58,7 +58,7 @@ public class SelectedUserActivity extends AppCompatActivity implements ServiceDo
     BlurImageView mBackgroundBLutImageView;
     ProgressBar mProgressBar;
     RecyclerView mRecyclerView;
-    TextView mEmailTextView, mBirthDateTextView;
+    TextView mEmailTextView, mBirthDateTextView, mChangeUserInfoTextView;
     FloatingActionButton mFloatingActionButton;
 
     SimpleDateFormat mFormatter = new SimpleDateFormat("dd MMMM yyyy");
@@ -91,6 +91,9 @@ public class SelectedUserActivity extends AppCompatActivity implements ServiceDo
         mUserPhotoCircleImageView = findViewById(R.id.user_photo_iv);
         mBackgroundBLutImageView = findViewById(R.id.blur_iv);
         mProgressBar = findViewById(R.id.preload_pb);
+
+        mChangeUserInfoTextView = findViewById(R.id.change_info_tv);
+        mChangeUserInfoTextView.setVisibility(View.GONE);
 
         mEmailTextView = findViewById(R.id.email_text_view);
         mBirthDateTextView = findViewById(R.id.birth_date_text_view);

@@ -2139,6 +2139,7 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id change_info_tv
 id checkbox
 id checked
 id checked_iv
@@ -2387,6 +2388,7 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id name_edit_text
+id name_et
 id nav_controller_view_tag
 id nav_host_fragment_container
 id navigation_bar_item_icon_view
@@ -2421,6 +2423,7 @@ id password_toggle
 id path
 id pathRelative
 id patronymic_edit_text
+id patronymic_et
 id peekHeight
 id percent
 id personal_info_empty_text_view
@@ -2546,6 +2549,7 @@ id stretch
 id submenuarrow
 id submit_area
 id surname_edit_text
+id surname_et
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -2726,6 +2730,7 @@ layout dialog_date
 layout dialog_display_image
 layout dialog_map
 layout dialog_theme_switcher
+layout dialog_user_info_change
 layout fragment_clients
 layout fragment_clinic
 layout fragment_clinic_registration

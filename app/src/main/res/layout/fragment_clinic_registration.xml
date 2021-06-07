@@ -47,6 +47,7 @@
         android:textColorHint="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:counterMaxLength="255"
         app:layout_constraintTop_toBottomOf="@+id/clinic_register_tv">
 
         <com.google.android.material.textfield.TextInputEditText

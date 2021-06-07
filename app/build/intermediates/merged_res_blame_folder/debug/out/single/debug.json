@@ -16,12 +16,12 @@
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xxxhdpi\\client_green_dark.png"
     },
     {
-        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_search_dark.png.flat",
-        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xxhdpi\\ic_search_dark.png"
-    },
-    {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-night-xxhdpi_ic_dark_mode.png.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxhdpi\\ic_dark_mode.png"
+    },
+    {
+        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_search_dark.png.flat",
+        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xxhdpi\\ic_search_dark.png"
     },
     {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_medicine.png.flat",
@@ -56,12 +56,12 @@
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xxxhdpi\\user_light.png"
     },
     {
-        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_client_purple_dark.png.flat",
-        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xxhdpi\\client_purple_dark.png"
-    },
-    {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_checked_green_dark.png.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xxhdpi\\checked_green_dark.png"
+    },
+    {
+        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_client_purple_dark.png.flat",
+        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xxhdpi\\client_purple_dark.png"
     },
     {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_checked_pink_light.png.flat",
@@ -76,12 +76,12 @@
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\layout\\item_service.xml"
     },
     {
-        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_menu_services_light.png.flat",
-        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-hdpi\\menu_services_light.png"
-    },
-    {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_selected_clinic.xml.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\layout\\activity_selected_clinic.xml"
+    },
+    {
+        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_menu_services_light.png.flat",
+        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-hdpi\\menu_services_light.png"
     },
     {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_doctor_pink_dark.png.flat",
@@ -168,6 +168,10 @@
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xhdpi\\client_pink_light.png"
     },
     {
+        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_user_info_change.xml.flat",
+        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\layout\\dialog_user_info_change.xml"
+    },
+    {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_service_purple_dark.png.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-mdpi\\service_purple_dark.png"
     },
@@ -192,20 +196,20 @@
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-ldpi\\service_pink_light.png"
     },
     {
-        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_doctor_green_light.png.flat",
-        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-ldpi\\doctor_green_light.png"
-    },
-    {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_hospital_pink_dark.png.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xxhdpi\\hospital_pink_dark.png"
     },
     {
-        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_medicine_logo.png.flat",
-        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xxxhdpi\\medicine_logo.png"
+        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_doctor_green_light.png.flat",
+        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-ldpi\\doctor_green_light.png"
     },
     {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_medicine.png.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-ldpi\\ic_medicine.png"
+    },
+    {
+        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_medicine_logo.png.flat",
+        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xxxhdpi\\medicine_logo.png"
     },
     {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_medicine.png.flat",
@@ -216,12 +220,12 @@
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-mdpi\\hospital_green_light.png"
     },
     {
-        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_hospital_green_light.png.flat",
-        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-hdpi\\hospital_green_light.png"
-    },
-    {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_log_out_light.png.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xxxhdpi\\log_out_light.png"
+    },
+    {
+        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_hospital_green_light.png.flat",
+        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-hdpi\\hospital_green_light.png"
     },
     {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_services.xml.flat",
@@ -236,12 +240,12 @@
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\font\\sfui_semibold.ttf"
     },
     {
-        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\anim_cycle_7.xml.flat",
-        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\anim\\cycle_7.xml"
-    },
-    {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_email.png.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xxhdpi\\email.png"
+    },
+    {
+        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\anim_cycle_7.xml.flat",
+        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\anim\\cycle_7.xml"
     },
     {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_client_purple_light.png.flat",
@@ -280,12 +284,12 @@
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-hdpi\\hospital_purple_light.png"
     },
     {
-        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\navigation_client_navigation.xml.flat",
-        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\navigation\\client_navigation.xml"
-    },
-    {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_log_out_light.png.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-ldpi\\log_out_light.png"
+    },
+    {
+        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\navigation_client_navigation.xml.flat",
+        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\navigation\\client_navigation.xml"
     },
     {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_doctor_pink_light.png.flat",
@@ -468,24 +472,24 @@
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-hdpi\\medicine_logo.png"
     },
     {
-        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_doctor_pink_light.png.flat",
-        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-hdpi\\doctor_pink_light.png"
-    },
-    {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_doctor_pink_light.png.flat",
+        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-hdpi\\doctor_pink_light.png"
     },
     {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_log_out_dark.png.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-ldpi\\log_out_dark.png"
     },
     {
-        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_map.xml.flat",
-        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\layout\\dialog_map.xml"
-    },
-    {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_menu_map_light.png.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-ldpi\\menu_map_light.png"
+    },
+    {
+        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_map.xml.flat",
+        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\layout\\dialog_map.xml"
     },
     {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
@@ -496,12 +500,12 @@
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-mdpi\\medicine_dark.png"
     },
     {
-        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_checked_green_light.png.flat",
-        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-hdpi\\checked_green_light.png"
-    },
-    {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_client_purple_dark.png.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-hdpi\\client_purple_dark.png"
+    },
+    {
+        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_checked_green_light.png.flat",
+        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-hdpi\\checked_green_light.png"
     },
     {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\font_sfui_bold.ttf.flat",
@@ -640,12 +644,12 @@
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-hdpi\\medicine.png"
     },
     {
-        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_checked_pink_light.png.flat",
-        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xhdpi\\checked_pink_light.png"
-    },
-    {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_service_purple_light.png.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-mdpi\\service_purple_light.png"
+    },
+    {
+        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_checked_pink_light.png.flat",
+        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xhdpi\\checked_pink_light.png"
     },
     {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\font_sfui_regular.ttf.flat",
@@ -684,12 +688,12 @@
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\layout\\item_service_doctor.xml"
     },
     {
-        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_doctor_green_light.png.flat",
-        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xxxhdpi\\doctor_green_light.png"
-    },
-    {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_menu_services_dark.png.flat",
         "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-mdpi\\menu_services_dark.png"
+    },
+    {
+        "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_doctor_green_light.png.flat",
+        "source": "C:\\AndroidLearning\\RPKPolyclinik\\app\\src\\main\\res\\drawable-xxxhdpi\\doctor_green_light.png"
     },
     {
         "merged": "C:\\AndroidLearning\\RPKPolyclinik\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_service_green_dark.png.flat",

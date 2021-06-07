@@ -3,6 +3,8 @@ package com.rpkeffect.android.rpkpolyclinik.activities;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,6 +18,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -62,6 +66,11 @@ public class SelectedServiceActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         mServiceId = bundle.getString(ARG_SERVICE_ID);
 
+        mImageView = findViewById(R.id.service_iv);
+        mStorageReference = mStorage.getInstance()
+                .getReference(getString(R.string.service_photo_reference, mServiceId));
+        setImage();
+
         mToolbar = findViewById(R.id.toolbar_clinic_name);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -103,6 +112,25 @@ public class SelectedServiceActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void setImage() {
+        mStorageReference.getBytes(2048 * 2048)
+                .addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                    @Override
+                    public void onSuccess(byte[] bytes) {
+                        mHasNoImage = false;
+                        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                        mImageView.setImageBitmap(bitmap);
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        mHasNoImage = true;
+                        mImageView.setImageResource(R.drawable.ic_service);
+                    }
+                });
     }
 
     private void fillInServiceData(ServiceDoctor serviceDoctor, Doctor doctor, Clinic clinic) {

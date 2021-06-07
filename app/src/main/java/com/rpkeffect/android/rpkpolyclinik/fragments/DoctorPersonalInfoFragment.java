@@ -33,6 +33,8 @@ import com.rpkeffect.android.rpkpolyclinik.interfaces.UserRegisteredListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class DoctorPersonalInfoFragment extends Fragment {
     private static final String ARG_MAIL = "mail";
@@ -118,14 +120,26 @@ public class DoctorPersonalInfoFragment extends Fragment {
         mNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Pattern pattern = Pattern.compile("[" + "а-яА-ЯёЁ" + "]" + "*");
+                Matcher matcherSurname = pattern.matcher(mSurname.getText().toString().trim());
+                Matcher matcherName = pattern.matcher(mName.getText().toString().trim());
+                Matcher matcherPatronymic = pattern.matcher(mPatronymic.getText().toString().trim());
+
                 if (!mSurname.getText().toString().trim().isEmpty()
                         && !mName.getText().toString().trim().isEmpty()
                         && !mPatronymic.getText().toString().trim().isEmpty()
-                        && !mPosition.getText().toString().trim().isEmpty()) {
+                        && !mPosition.getText().toString().trim().isEmpty()
+                        && matcherSurname.matches() && matcherName.matches() && matcherPatronymic.matches()) {
                     mErrorTextView.setVisibility(View.GONE);
                     registerNewUser(mMail, mPassword);
+                } else if (!matcherSurname.matches() || !matcherName.matches()
+                        || !matcherPatronymic.matches()) {
+                    mErrorTextView.setVisibility(View.VISIBLE);
+                    mErrorTextView.setText("Поля должны состоять из кириллицы!");
+                    emptyValuesAnimation();
                 } else {
                     mErrorTextView.setVisibility(View.VISIBLE);
+                    mErrorTextView.setText("Заполните все поля!");
                     emptyValuesAnimation();
                 }
             }

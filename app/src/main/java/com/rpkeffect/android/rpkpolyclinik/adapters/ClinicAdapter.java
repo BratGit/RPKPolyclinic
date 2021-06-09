@@ -129,7 +129,8 @@ public class ClinicAdapter extends RecyclerView.Adapter<ClinicHolder> {
     @Override
     public int getItemViewType(int position) {
         for (UserClinic userClinic : mUserClinics){
-            if (mList.get(position).getId().equals(userClinic.getClinicId()))
+            if (mList.get(position).getId().equals(userClinic.getClinicId())
+                    && userClinic.getStatus() == UserClinic.STATUS_ACCEPT)
                 return ITEM_VIEW_CHECKED;
         } return ITEM_VIEW_BASE;
     }

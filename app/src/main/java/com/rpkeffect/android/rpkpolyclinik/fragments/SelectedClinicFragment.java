@@ -211,10 +211,10 @@ public class SelectedClinicFragment extends Fragment implements ServiceDoctorAda
                 mCreateQueryButton.setText("Вы прикреплены к данному учреждению");
                 mCreateQueryButton.setEnabled(false);
             } else if (userClinic.getStatus() == UserClinic.STATUS_DECLINE) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    mCreateQueryButton.setBackgroundColor(Color.parseColor("#410625"));
-                    mCreateQueryButton.setTextColor(Color.parseColor("#B00020"));
-                }
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//                    mCreateQueryButton.setBackgroundColor(Color.parseColor("#410625"));
+//                    mCreateQueryButton.setTextColor(Color.parseColor("#B00020"));
+//                }
                 mQueryDeclinedTextView.setVisibility(View.VISIBLE);
                 mCreateQueryButton.setText("Заявка отклонена");
                 mCreateQueryButton.setEnabled(false);
